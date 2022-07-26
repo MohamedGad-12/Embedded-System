@@ -2,3 +2,5 @@
 - lesson_4: Array & String
 - lesson_5: Functions
 - lesson_6: structures_Union_Enum
+- lesson_7: NULL
+- lesson_8: Pointers
