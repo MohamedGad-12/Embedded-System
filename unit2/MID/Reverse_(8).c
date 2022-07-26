@@ -23,7 +23,7 @@ int main(int argc, char *argv[]) {
 	printf("Please Elements:");
 	fflush(stdin); fflush(stdout);
 
-	for(int i=(size-1) ; i>=0 ; i--){
+	for(int i=0 ; i<size ; i++){
 		scanf("%d" , &n[i] );
 	}
 
@@ -35,7 +35,7 @@ int main(int argc, char *argv[]) {
 void sq(int n[] , int size){
 
 	for(int i=(size-1) ; i>=0 ; i--){
-		printf("%d" , n[i]);
+		printf("%d " , n[i]);
 	}
 
 }
