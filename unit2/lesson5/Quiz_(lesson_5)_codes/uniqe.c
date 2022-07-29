@@ -10,8 +10,6 @@
 #include "string.h"
 #include "math.h"
 
-int binary(int n);
-
 int main(int argc, char *argv[]) {
 
 	int a[100];
@@ -36,33 +34,18 @@ int main(int argc, char *argv[]) {
 	for (int i=0 ; i <100 ; i++){
 		b[a[i]]++;
 	}
-
+	
+	printf("Uniqe Element: ");
 	for (int i=0 ; i <100 ; i++){
 		if (b[a[i]] == 1)
-			printf("%d ",a[i]);
+			printf("%d , ",a[i]);
 	}
 	if( (b[0]- (100-n)) == 1 ){
 		printf("%d ", 0);
 	}
-
+	return 0;
 }
 
-
-int binary(int  n){
-
-	static int count = 0;
-	if(count == 3){
-		printf("4th is %d \nthe Number: " ,(n % 2));
-	}
-	if(n == 0){
-		return 0;
-
-	}
-	count++;
-	binary(n/2);
-	printf("%d " ,(n % 2));
-	return count;
-}
 
 
 
