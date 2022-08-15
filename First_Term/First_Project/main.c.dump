@@ -1,0 +1,530 @@
+<?xml version="1.0"?>
+<dumps>
+  <platform name="win64" char_bit="8" short_bit="16" int_bit="32" long_bit="32" long_long_bit="64" pointer_bit="64"/>
+  <rawtokens>
+    <file index="0" name="main.c"/>
+    <file index="1" name="Psensor.h"/>
+    <file index="2" name="alarm_act.h"/>
+    <file index="3" name="alarm_monitor.h"/>
+    <file index="4" name="driver.h"/>
+    <file index="5" name="Algo.h"/>
+    <file index="6" name="state.h"/>
+    <tok fileIndex="0" linenr="1" column="1" str="/* Eng. Mohamed Gamal */"/>
+    <tok fileIndex="0" linenr="3" column="1" str="#"/>
+    <tok fileIndex="0" linenr="3" column="2" str="include"/>
+    <tok fileIndex="0" linenr="3" column="10" str="&lt;stdint.h&gt;"/>
+    <tok fileIndex="0" linenr="4" column="1" str="#"/>
+    <tok fileIndex="0" linenr="4" column="2" str="include"/>
+    <tok fileIndex="0" linenr="4" column="10" str="&quot;Psensor.h&quot;"/>
+    <tok fileIndex="0" linenr="5" column="1" str="#"/>
+    <tok fileIndex="0" linenr="5" column="2" str="include"/>
+    <tok fileIndex="0" linenr="5" column="10" str="&quot;alarm_act.h&quot;"/>
+    <tok fileIndex="0" linenr="6" column="1" str="#"/>
+    <tok fileIndex="0" linenr="6" column="2" str="include"/>
+    <tok fileIndex="0" linenr="6" column="10" str="&quot;alarm_monitor.h&quot;"/>
+    <tok fileIndex="0" linenr="7" column="1" str="#"/>
+    <tok fileIndex="0" linenr="7" column="2" str="include"/>
+    <tok fileIndex="0" linenr="7" column="10" str="&quot;driver.h&quot;"/>
+    <tok fileIndex="0" linenr="8" column="1" str="#"/>
+    <tok fileIndex="0" linenr="8" column="2" str="include"/>
+    <tok fileIndex="0" linenr="8" column="10" str="&quot;Algo.h&quot;"/>
+    <tok fileIndex="0" linenr="9" column="1" str="#"/>
+    <tok fileIndex="0" linenr="9" column="2" str="include"/>
+    <tok fileIndex="0" linenr="9" column="10" str="&quot;state.h&quot;"/>
+    <tok fileIndex="0" linenr="13" column="1" str="void"/>
+    <tok fileIndex="0" linenr="13" column="6" str="setup"/>
+    <tok fileIndex="0" linenr="13" column="11" str="("/>
+    <tok fileIndex="0" linenr="13" column="12" str=")"/>
+    <tok fileIndex="0" linenr="13" column="14" str="{"/>
+    <tok fileIndex="0" linenr="15" column="2" str="init"/>
+    <tok fileIndex="0" linenr="15" column="6" str="("/>
+    <tok fileIndex="0" linenr="15" column="7" str=")"/>
+    <tok fileIndex="0" linenr="15" column="8" str=";"/>
+    <tok fileIndex="0" linenr="16" column="2" str="Sensor_init"/>
+    <tok fileIndex="0" linenr="16" column="13" str="("/>
+    <tok fileIndex="0" linenr="16" column="14" str=")"/>
+    <tok fileIndex="0" linenr="16" column="15" str=";"/>
+    <tok fileIndex="0" linenr="17" column="2" str="A_STATE"/>
+    <tok fileIndex="0" linenr="17" column="10" str="="/>
+    <tok fileIndex="0" linenr="17" column="13" str="STATE"/>
+    <tok fileIndex="0" linenr="17" column="18" str="("/>
+    <tok fileIndex="0" linenr="17" column="19" str="AlarmOff"/>
+    <tok fileIndex="0" linenr="17" column="27" str=")"/>
+    <tok fileIndex="0" linenr="17" column="28" str=";"/>
+    <tok fileIndex="0" linenr="18" column="2" str="Sen_STATE"/>
+    <tok fileIndex="0" linenr="18" column="12" str="="/>
+    <tok fileIndex="0" linenr="18" column="14" str="STATE"/>
+    <tok fileIndex="0" linenr="18" column="19" str="("/>
+    <tok fileIndex="0" linenr="18" column="20" str="reading"/>
+    <tok fileIndex="0" linenr="18" column="27" str=")"/>
+    <tok fileIndex="0" linenr="18" column="28" str=";"/>
+    <tok fileIndex="0" linenr="19" column="2" str="Algo_STATE"/>
+    <tok fileIndex="0" linenr="19" column="13" str="="/>
+    <tok fileIndex="0" linenr="19" column="15" str="STATE"/>
+    <tok fileIndex="0" linenr="19" column="20" str="("/>
+    <tok fileIndex="0" linenr="19" column="21" str="High_Pressure_Detection"/>
+    <tok fileIndex="0" linenr="19" column="44" str=")"/>
+    <tok fileIndex="0" linenr="19" column="45" str=";"/>
+    <tok fileIndex="0" linenr="20" column="2" str="stop_alarm"/>
+    <tok fileIndex="0" linenr="20" column="12" str="("/>
+    <tok fileIndex="0" linenr="20" column="13" str=")"/>
+    <tok fileIndex="0" linenr="20" column="14" str=";"/>
+    <tok fileIndex="0" linenr="21" column="2" str="Act_STATE"/>
+    <tok fileIndex="0" linenr="21" column="12" str="="/>
+    <tok fileIndex="0" linenr="21" column="14" str="STATE"/>
+    <tok fileIndex="0" linenr="21" column="19" str="("/>
+    <tok fileIndex="0" linenr="21" column="20" str="act_wait"/>
+    <tok fileIndex="0" linenr="21" column="28" str=")"/>
+    <tok fileIndex="0" linenr="21" column="29" str=";"/>
+    <tok fileIndex="0" linenr="22" column="1" str="}"/>
+    <tok fileIndex="0" linenr="24" column="1" str="int"/>
+    <tok fileIndex="0" linenr="24" column="5" str="main"/>
+    <tok fileIndex="0" linenr="24" column="10" str="("/>
+    <tok fileIndex="0" linenr="24" column="11" str=")"/>
+    <tok fileIndex="0" linenr="24" column="12" str="{"/>
+    <tok fileIndex="0" linenr="25" column="2" str="GPIO_INITIALIZATION"/>
+    <tok fileIndex="0" linenr="25" column="21" str="("/>
+    <tok fileIndex="0" linenr="25" column="22" str=")"/>
+    <tok fileIndex="0" linenr="25" column="23" str=";"/>
+    <tok fileIndex="0" linenr="26" column="2" str="setup"/>
+    <tok fileIndex="0" linenr="26" column="7" str="("/>
+    <tok fileIndex="0" linenr="26" column="8" str=")"/>
+    <tok fileIndex="0" linenr="26" column="9" str=";"/>
+    <tok fileIndex="0" linenr="27" column="2" str="while"/>
+    <tok fileIndex="0" linenr="27" column="8" str="("/>
+    <tok fileIndex="0" linenr="27" column="9" str="1"/>
+    <tok fileIndex="0" linenr="27" column="10" str=")"/>
+    <tok fileIndex="0" linenr="28" column="2" str="{"/>
+    <tok fileIndex="0" linenr="29" column="3" str="Sen_STATE"/>
+    <tok fileIndex="0" linenr="29" column="12" str="("/>
+    <tok fileIndex="0" linenr="29" column="13" str=")"/>
+    <tok fileIndex="0" linenr="29" column="14" str=";"/>
+    <tok fileIndex="0" linenr="30" column="3" str="Algo_STATE"/>
+    <tok fileIndex="0" linenr="30" column="13" str="("/>
+    <tok fileIndex="0" linenr="30" column="14" str=")"/>
+    <tok fileIndex="0" linenr="30" column="15" str=";"/>
+    <tok fileIndex="0" linenr="31" column="3" str="A_STATE"/>
+    <tok fileIndex="0" linenr="31" column="10" str="("/>
+    <tok fileIndex="0" linenr="31" column="11" str=")"/>
+    <tok fileIndex="0" linenr="31" column="12" str=";"/>
+    <tok fileIndex="0" linenr="32" column="3" str="Act_STATE"/>
+    <tok fileIndex="0" linenr="32" column="12" str="("/>
+    <tok fileIndex="0" linenr="32" column="13" str=")"/>
+    <tok fileIndex="0" linenr="32" column="14" str=";"/>
+    <tok fileIndex="0" linenr="34" column="3" str="Delay"/>
+    <tok fileIndex="0" linenr="34" column="8" str="("/>
+    <tok fileIndex="0" linenr="34" column="9" str="10000"/>
+    <tok fileIndex="0" linenr="34" column="14" str=")"/>
+    <tok fileIndex="0" linenr="34" column="15" str=";"/>
+    <tok fileIndex="0" linenr="36" column="2" str="}"/>
+    <tok fileIndex="0" linenr="38" column="1" str="}"/>
+  </rawtokens>
+  <suppressions>
+  </suppressions>
+<dump cfg="">
+  <standards>
+    <c version="c11"/>
+    <cpp version="c++20"/>
+  </standards>
+  <directivelist>
+    <directive file="main.c" linenr="3" str="#include &lt;stdint.h&gt;"/>
+    <directive file="main.c" linenr="4" str="#include &quot;Psensor.h&quot;"/>
+    <directive file="main.c" linenr="5" str="#include &quot;alarm_act.h&quot;"/>
+    <directive file="main.c" linenr="6" str="#include &quot;alarm_monitor.h&quot;"/>
+    <directive file="main.c" linenr="7" str="#include &quot;driver.h&quot;"/>
+    <directive file="main.c" linenr="8" str="#include &quot;Algo.h&quot;"/>
+    <directive file="main.c" linenr="9" str="#include &quot;state.h&quot;"/>
+    <directive file="Algo.h" linenr="3" str="#ifndef ALGO_H_"/>
+    <directive file="Algo.h" linenr="4" str="#define ALGO_H_"/>
+    <directive file="Algo.h" linenr="6" str="#include &quot;state.h&quot;"/>
+    <directive file="Algo.h" linenr="18" str="#endif"/>
+    <directive file="Psensor.h" linenr="3" str="#ifndef PSENSOR_H_"/>
+    <directive file="Psensor.h" linenr="4" str="#define PSENSOR_H_"/>
+    <directive file="Psensor.h" linenr="6" str="#include &quot;state.h&quot;"/>
+    <directive file="Psensor.h" linenr="21" str="#endif"/>
+    <directive file="alarm_act.h" linenr="3" str="#ifndef ALARM_ACT_H_"/>
+    <directive file="alarm_act.h" linenr="4" str="#define ALARM_ACT_H_"/>
+    <directive file="alarm_act.h" linenr="6" str="#include &quot;state.h&quot;"/>
+    <directive file="alarm_act.h" linenr="23" str="#endif"/>
+    <directive file="alarm_monitor.h" linenr="3" str="#ifndef ALARM_MONITOR_H_"/>
+    <directive file="alarm_monitor.h" linenr="4" str="#define ALARM_MONITOR_H_"/>
+    <directive file="alarm_monitor.h" linenr="6" str="#include &quot;state.h&quot;"/>
+    <directive file="alarm_monitor.h" linenr="21" str="#endif"/>
+    <directive file="driver.h" linenr="3" str="#ifndef DRIVER_H_"/>
+    <directive file="driver.h" linenr="4" str="#define DRIVER_H_"/>
+    <directive file="driver.h" linenr="6" str="#include &lt;stdint.h&gt;"/>
+    <directive file="driver.h" linenr="8" str="#define SET_BIT(ADDRESS,BIT) ((ADDRESS) |= (1&lt;&lt;(BIT)))"/>
+    <directive file="driver.h" linenr="9" str="#define RESET_BIT(ADDRESS,BIT) ((ADDRESS) &amp;= ~(1&lt;&lt;(BIT)))"/>
+    <directive file="driver.h" linenr="10" str="#define TOGGLE_BIT(ADDRESS,BIT) ((ADDRESS) ^= (1&lt;&lt;(BIT)))"/>
+    <directive file="driver.h" linenr="11" str="#define READ_BIT(ADDRESS,BIT) ((ADDRESS) &amp; (1&lt;&lt;(BIT)))"/>
+    <directive file="driver.h" linenr="14" str="#define GPIO_PORTA 0x40010800"/>
+    <directive file="driver.h" linenr="15" str="#define BASE_RCC 0x40021000"/>
+    <directive file="driver.h" linenr="17" str="#define APB2ENR *(volatile uint32_t *)(BASE_RCC + 0x18)"/>
+    <directive file="driver.h" linenr="19" str="#define GPIOA_CRL *(volatile uint32_t *)(GPIO_PORTA + 0x00)"/>
+    <directive file="driver.h" linenr="20" str="#define GPIOA_CRH *(volatile uint32_t *)(GPIO_PORTA + 0X04)"/>
+    <directive file="driver.h" linenr="21" str="#define GPIOA_IDR *(volatile uint32_t *)(GPIO_PORTA + 0x08)"/>
+    <directive file="driver.h" linenr="22" str="#define GPIOA_ODR *(volatile uint32_t *)(GPIO_PORTA + 0x0C)"/>
+    <directive file="driver.h" linenr="31" str="#endif"/>
+    <directive file="state.h" linenr="3" str="#ifndef STATE_H_"/>
+    <directive file="state.h" linenr="4" str="#define STATE_H_"/>
+    <directive file="state.h" linenr="6" str="#define STATE_define(_statefunc_) void ST_##_statefunc_()"/>
+    <directive file="state.h" linenr="7" str="#define STATE(_statefunc_) ST_##_statefunc_"/>
+    <directive file="state.h" linenr="14" str="#endif"/>
+  </directivelist>
+  <tokenlist>
+    <token id="000001E6E8961B00" file="state.h" linenr="9" column="1" str="void" scope="000001E6E8257B60" type="name"/>
+    <token id="000001E6E89617A0" file="state.h" linenr="9" column="6" str="set_pval" scope="000001E6E8257B60" type="name" function="000001E6E826BD90"/>
+    <token id="000001E6E89616E0" file="state.h" linenr="9" column="14" str="(" scope="000001E6E8257B60" link="000001E6E8961E60" valueType-type="void" valueType-reference="None"/>
+    <token id="000001E6E8961E60" file="state.h" linenr="9" column="15" str=")" scope="000001E6E8257B60" link="000001E6E89616E0"/>
+    <token id="000001E6E8962040" file="state.h" linenr="9" column="16" str=";" scope="000001E6E8257B60"/>
+    <token id="000001E6E8961E00" file="state.h" linenr="10" column="1" str="void" scope="000001E6E8257B60" type="name"/>
+    <token id="000001E6E8961AA0" file="state.h" linenr="10" column="6" str="detect_high_pressure" scope="000001E6E8257B60" type="name" function="000001E6E826BE30"/>
+    <token id="000001E6E8961920" file="state.h" linenr="10" column="26" str="(" scope="000001E6E8257B60" link="000001E6E8962100" valueType-type="void" valueType-reference="None"/>
+    <token id="000001E6E8962100" file="state.h" linenr="10" column="27" str=")" scope="000001E6E8257B60" link="000001E6E8961920"/>
+    <token id="000001E6E89613E0" file="state.h" linenr="10" column="28" str=";" scope="000001E6E8257B60"/>
+    <token id="000001E6E8961C80" file="state.h" linenr="11" column="1" str="void" scope="000001E6E8257B60" type="name"/>
+    <token id="000001E6E8961B60" file="state.h" linenr="11" column="6" str="start_alarm" scope="000001E6E8257B60" type="name" function="000001E6E826B750"/>
+    <token id="000001E6E8961CE0" file="state.h" linenr="11" column="17" str="(" scope="000001E6E8257B60" link="000001E6E8961320" valueType-type="void" valueType-reference="None"/>
+    <token id="000001E6E8961320" file="state.h" linenr="11" column="18" str=")" scope="000001E6E8257B60" link="000001E6E8961CE0"/>
+    <token id="000001E6E8961740" file="state.h" linenr="11" column="19" str=";" scope="000001E6E8257B60"/>
+    <token id="000001E6E8961380" file="state.h" linenr="12" column="1" str="void" scope="000001E6E8257B60" type="name"/>
+    <token id="000001E6E8961BC0" file="state.h" linenr="12" column="6" str="stop_alarm" scope="000001E6E8257B60" type="name" function="000001E6E826B7F0"/>
+    <token id="000001E6E8961D40" file="state.h" linenr="12" column="16" str="(" scope="000001E6E8257B60" link="000001E6E8961440" valueType-type="void" valueType-reference="None"/>
+    <token id="000001E6E8961440" file="state.h" linenr="12" column="17" str=")" scope="000001E6E8257B60" link="000001E6E8961D40"/>
+    <token id="000001E6E8961DA0" file="state.h" linenr="12" column="18" str=";" scope="000001E6E8257B60"/>
+    <token id="000001E6E89614A0" file="Psensor.h" linenr="8" column="1" str="enum" scope="000001E6E8257B60" type="name"/>
+    <token id="000001E6E830C230" file="Psensor.h" linenr="8" column="0" str="Anonymous0" scope="000001E6E8257B60" type="name" type-scope="000001E6E82581C0"/>
+    <token id="000001E6E8961800" file="Psensor.h" linenr="8" column="6" str="{" scope="000001E6E82581C0" link="000001E6E89615C0"/>
+    <token id="000001E6E8961500" file="Psensor.h" linenr="9" column="2" str="reading" scope="000001E6E82581C0" type="name" values="000001E6E89629D0" valueType-type="int" valueType-sign="signed" valueType-reference="None" valueType-typeScope="000001E6E82581C0"/>
+    <token id="000001E6E8961EC0" file="Psensor.h" linenr="9" column="9" str="," scope="000001E6E82581C0"/>
+    <token id="000001E6E8961980" file="Psensor.h" linenr="10" column="2" str="waiting" scope="000001E6E82581C0" type="name" values="000001E6E8962510" valueType-type="int" valueType-sign="signed" valueType-reference="None" valueType-typeScope="000001E6E82581C0"/>
+    <token id="000001E6E8961560" file="Psensor.h" linenr="10" column="9" str="," scope="000001E6E82581C0"/>
+    <token id="000001E6E89615C0" file="Psensor.h" linenr="11" column="1" str="}" scope="000001E6E82581C0" link="000001E6E8961800"/>
+    <token id="000001E6E830CE90" file="Psensor.h" linenr="11" column="0" str=";" scope="000001E6E8257B60"/>
+    <token id="000001E6E830CEF0" file="Psensor.h" linenr="11" column="0" str="enum" scope="000001E6E8257B60" type="name"/>
+    <token id="000001E6E830CB90" file="Psensor.h" linenr="11" column="0" str="Anonymous0" scope="000001E6E8257B60" type="name" type-scope="000001E6E82581C0"/>
+    <token id="000001E6E8961680" file="Psensor.h" linenr="11" column="2" str="sensor" scope="000001E6E8257B60" type="name" varId="1" variable="000001E6E86FFE10" valueType-type="int" valueType-sign="signed" valueType-reference="None" valueType-typeScope="000001E6E82581C0"/>
+    <token id="000001E6E826A6F0" file="Psensor.h" linenr="11" column="8" str=";" scope="000001E6E8257B60"/>
+    <token id="000001E6E826B2F0" file="Psensor.h" linenr="14" column="1" str="void" scope="000001E6E8257B60" type="name" isExpandedMacro="true"/>
+    <token id="000001E6E826B290" file="Psensor.h" linenr="14" column="1" str="ST_reading" scope="000001E6E8257B60" type="name" function="000001E6E826B930"/>
+    <token id="000001E6E826A510" file="Psensor.h" linenr="14" column="1" str="(" scope="000001E6E8257B60" isExpandedMacro="true" link="000001E6E826ADB0" valueType-type="void" valueType-reference="None"/>
+    <token id="000001E6E826ADB0" file="Psensor.h" linenr="14" column="1" str=")" scope="000001E6E8257B60" isExpandedMacro="true" link="000001E6E826A510"/>
+    <token id="000001E6E826A570" file="Psensor.h" linenr="14" column="22" str=";" scope="000001E6E8257B60"/>
+    <token id="000001E6E826A5D0" file="Psensor.h" linenr="15" column="1" str="void" scope="000001E6E8257B60" type="name" isExpandedMacro="true"/>
+    <token id="000001E6E826A870" file="Psensor.h" linenr="15" column="1" str="ST_waiting" scope="000001E6E8257B60" type="name" function="000001E6E826BA70"/>
+    <token id="000001E6E826A630" file="Psensor.h" linenr="15" column="1" str="(" scope="000001E6E8257B60" isExpandedMacro="true" link="000001E6E826AC90" valueType-type="void" valueType-reference="None"/>
+    <token id="000001E6E826AC90" file="Psensor.h" linenr="15" column="1" str=")" scope="000001E6E8257B60" isExpandedMacro="true" link="000001E6E826A630"/>
+    <token id="000001E6E826AB70" file="Psensor.h" linenr="15" column="22" str=";" scope="000001E6E8257B60"/>
+    <token id="000001E6E826A810" file="Psensor.h" linenr="17" column="1" str="void" scope="000001E6E8257B60" type="name"/>
+    <token id="000001E6E826AFF0" file="Psensor.h" linenr="17" column="6" str="Sensor_init" scope="000001E6E8257B60" type="name" function="000001E6E8C0BD30"/>
+    <token id="000001E6E826A690" file="Psensor.h" linenr="17" column="17" str="(" scope="000001E6E8257B60" link="000001E6E826B350" valueType-type="void" valueType-reference="None"/>
+    <token id="000001E6E826B350" file="Psensor.h" linenr="17" column="18" str=")" scope="000001E6E8257B60" link="000001E6E826A690"/>
+    <token id="000001E6E826AB10" file="Psensor.h" linenr="17" column="19" str=";" scope="000001E6E8257B60"/>
+    <token id="000001E6E826B230" file="Psensor.h" linenr="19" column="1" str="void" scope="000001E6E8257B60" type="name" astParent="000001E6E826AD50"/>
+    <token id="000001E6E826AD50" file="Psensor.h" linenr="19" column="6" str="(" scope="000001E6E8257B60" link="000001E6E826A750" astParent="000001E6E830DEB0" astOperand1="000001E6E826B230" astOperand2="000001E6E826A8D0" valueType-type="void" valueType-reference="None"/>
+    <token id="000001E6E826A8D0" file="Psensor.h" linenr="19" column="7" str="*" scope="000001E6E8257B60" type="op" isArithmeticalOp="true" astParent="000001E6E826AD50" astOperand1="000001E6E826AF90" valueType-type="void" valueType-reference="None"/>
+    <token id="000001E6E826AF90" file="Psensor.h" linenr="19" column="9" str="Sen_STATE" scope="000001E6E8257B60" type="name" varId="2" variable="000001E6E8700740" astParent="000001E6E826A8D0" valueType-type="void" valueType-pointer="1" valueType-reference="None"/>
+    <token id="000001E6E826A750" file="Psensor.h" linenr="19" column="18" str=")" scope="000001E6E8257B60" link="000001E6E826AD50"/>
+    <token id="000001E6E830DEB0" file="Psensor.h" linenr="19" column="0" str="(" scope="000001E6E8257B60" link="000001E6E830D9D0" astOperand1="000001E6E826AD50"/>
+    <token id="000001E6E830D9D0" file="Psensor.h" linenr="19" column="0" str=")" scope="000001E6E8257B60" link="000001E6E830DEB0"/>
+    <token id="000001E6E826AF30" file="Psensor.h" linenr="19" column="22" str=";" scope="000001E6E8257B60"/>
+    <token id="000001E6E826A930" file="alarm_act.h" linenr="8" column="1" str="void" scope="000001E6E8257B60" type="name"/>
+    <token id="000001E6E826B3B0" file="alarm_act.h" linenr="8" column="6" str="init" scope="000001E6E8257B60" type="name" function="000001E6E8C0A930"/>
+    <token id="000001E6E826A990" file="alarm_act.h" linenr="8" column="10" str="(" scope="000001E6E8257B60" link="000001E6E826A9F0" valueType-type="void" valueType-reference="None"/>
+    <token id="000001E6E826A9F0" file="alarm_act.h" linenr="8" column="11" str=")" scope="000001E6E8257B60" link="000001E6E826A990"/>
+    <token id="000001E6E826B050" file="alarm_act.h" linenr="8" column="12" str=";" scope="000001E6E8257B60"/>
+    <token id="000001E6E826AA50" file="alarm_act.h" linenr="10" column="1" str="enum" scope="000001E6E8257B60" type="name"/>
+    <token id="000001E6E830C290" file="alarm_act.h" linenr="10" column="0" str="Anonymous1" scope="000001E6E8257B60" type="name" type-scope="000001E6E82582D0"/>
+    <token id="000001E6E826B170" file="alarm_act.h" linenr="10" column="6" str="{" scope="000001E6E82582D0" link="000001E6E826AE70"/>
+    <token id="000001E6E826AE10" file="alarm_act.h" linenr="11" column="2" str="act_wait" scope="000001E6E82582D0" type="name" values="000001E6E89628B0" valueType-type="int" valueType-sign="signed" valueType-reference="None" valueType-typeScope="000001E6E82582D0"/>
+    <token id="000001E6E826AAB0" file="alarm_act.h" linenr="11" column="10" str="," scope="000001E6E82582D0"/>
+    <token id="000001E6E826ABD0" file="alarm_act.h" linenr="12" column="2" str="act_off" scope="000001E6E82582D0" type="name" values="000001E6E8962690" valueType-type="int" valueType-sign="signed" valueType-reference="None" valueType-typeScope="000001E6E82582D0"/>
+    <token id="000001E6E826AC30" file="alarm_act.h" linenr="12" column="9" str="," scope="000001E6E82582D0"/>
+    <token id="000001E6E826ACF0" file="alarm_act.h" linenr="13" column="2" str="act_on" scope="000001E6E82582D0" type="name" values="000001E6E8962890" valueType-type="int" valueType-sign="signed" valueType-reference="None" valueType-typeScope="000001E6E82582D0"/>
+    <token id="000001E6E826AE70" file="alarm_act.h" linenr="14" column="1" str="}" scope="000001E6E82582D0" link="000001E6E826B170"/>
+    <token id="000001E6E830C410" file="alarm_act.h" linenr="14" column="0" str=";" scope="000001E6E8257B60"/>
+    <token id="000001E6E830C470" file="alarm_act.h" linenr="14" column="0" str="enum" scope="000001E6E8257B60" type="name"/>
+    <token id="000001E6E830C7D0" file="alarm_act.h" linenr="14" column="0" str="Anonymous1" scope="000001E6E8257B60" type="name" type-scope="000001E6E82582D0"/>
+    <token id="000001E6E826AED0" file="alarm_act.h" linenr="14" column="2" str="act" scope="000001E6E8257B60" type="name" varId="3" variable="000001E6E87005F0" valueType-type="int" valueType-sign="signed" valueType-reference="None" valueType-typeScope="000001E6E82582D0"/>
+    <token id="000001E6E826B0B0" file="alarm_act.h" linenr="14" column="5" str=";" scope="000001E6E8257B60"/>
+    <token id="000001E6E826B110" file="alarm_act.h" linenr="16" column="1" str="void" scope="000001E6E8257B60" type="name" isExpandedMacro="true"/>
+    <token id="000001E6E826B1D0" file="alarm_act.h" linenr="16" column="1" str="ST_act_wait" scope="000001E6E8257B60" type="name" function="000001E6E8C0ACF0"/>
+    <token id="000001E6E83093F0" file="alarm_act.h" linenr="16" column="1" str="(" scope="000001E6E8257B60" isExpandedMacro="true" link="000001E6E8309450" valueType-type="void" valueType-reference="None"/>
+    <token id="000001E6E8309450" file="alarm_act.h" linenr="16" column="1" str=")" scope="000001E6E8257B60" isExpandedMacro="true" link="000001E6E83093F0"/>
+    <token id="000001E6E8309570" file="alarm_act.h" linenr="16" column="23" str=";" scope="000001E6E8257B60"/>
+    <token id="000001E6E8309DB0" file="alarm_act.h" linenr="17" column="1" str="void" scope="000001E6E8257B60" type="name" isExpandedMacro="true"/>
+    <token id="000001E6E8309750" file="alarm_act.h" linenr="17" column="1" str="ST_act_off" scope="000001E6E8257B60" type="name" function="000001E6E8C0BAB0"/>
+    <token id="000001E6E8309690" file="alarm_act.h" linenr="17" column="1" str="(" scope="000001E6E8257B60" isExpandedMacro="true" link="000001E6E8309030" valueType-type="void" valueType-reference="None"/>
+    <token id="000001E6E8309030" file="alarm_act.h" linenr="17" column="1" str=")" scope="000001E6E8257B60" isExpandedMacro="true" link="000001E6E8309690"/>
+    <token id="000001E6E8309510" file="alarm_act.h" linenr="17" column="22" str=";" scope="000001E6E8257B60"/>
+    <token id="000001E6E8308FD0" file="alarm_act.h" linenr="18" column="1" str="void" scope="000001E6E8257B60" type="name" isExpandedMacro="true"/>
+    <token id="000001E6E8309270" file="alarm_act.h" linenr="18" column="1" str="ST_act_on" scope="000001E6E8257B60" type="name" function="000001E6E8C0BC90"/>
+    <token id="000001E6E8309810" file="alarm_act.h" linenr="18" column="1" str="(" scope="000001E6E8257B60" isExpandedMacro="true" link="000001E6E8309090" valueType-type="void" valueType-reference="None"/>
+    <token id="000001E6E8309090" file="alarm_act.h" linenr="18" column="1" str=")" scope="000001E6E8257B60" isExpandedMacro="true" link="000001E6E8309810"/>
+    <token id="000001E6E83090F0" file="alarm_act.h" linenr="18" column="21" str=";" scope="000001E6E8257B60"/>
+    <token id="000001E6E83094B0" file="alarm_act.h" linenr="20" column="1" str="void" scope="000001E6E8257B60" type="name" astParent="000001E6E8309210"/>
+    <token id="000001E6E8309210" file="alarm_act.h" linenr="20" column="6" str="(" scope="000001E6E8257B60" link="000001E6E83096F0" astParent="000001E6E830D970" astOperand1="000001E6E83094B0" astOperand2="000001E6E83095D0" valueType-type="void" valueType-reference="None"/>
+    <token id="000001E6E83095D0" file="alarm_act.h" linenr="20" column="7" str="*" scope="000001E6E8257B60" type="op" isArithmeticalOp="true" astParent="000001E6E8309210" astOperand1="000001E6E83098D0" valueType-type="void" valueType-reference="None"/>
+    <token id="000001E6E83098D0" file="alarm_act.h" linenr="20" column="9" str="Act_STATE" scope="000001E6E8257B60" type="name" varId="4" variable="000001E6E87007B0" astParent="000001E6E83095D0" valueType-type="void" valueType-pointer="1" valueType-reference="None"/>
+    <token id="000001E6E83096F0" file="alarm_act.h" linenr="20" column="18" str=")" scope="000001E6E8257B60" link="000001E6E8309210"/>
+    <token id="000001E6E830D970" file="alarm_act.h" linenr="20" column="0" str="(" scope="000001E6E8257B60" link="000001E6E830D790" astOperand1="000001E6E8309210"/>
+    <token id="000001E6E830D790" file="alarm_act.h" linenr="20" column="0" str=")" scope="000001E6E8257B60" link="000001E6E830D970"/>
+    <token id="000001E6E83092D0" file="alarm_act.h" linenr="20" column="22" str=";" scope="000001E6E8257B60"/>
+    <token id="000001E6E83097B0" file="alarm_monitor.h" linenr="8" column="1" str="enum" scope="000001E6E8257B60" type="name"/>
+    <token id="000001E6E830CB30" file="alarm_monitor.h" linenr="8" column="0" str="Anonymous2" scope="000001E6E8257B60" type="name" type-scope="000001E6E8257FA0"/>
+    <token id="000001E6E8309870" file="alarm_monitor.h" linenr="8" column="6" str="{" scope="000001E6E8257FA0" link="000001E6E83099F0"/>
+    <token id="000001E6E8309990" file="alarm_monitor.h" linenr="9" column="2" str="AlarmOff" scope="000001E6E8257FA0" type="name" values="000001E6E8962730" valueType-type="int" valueType-sign="signed" valueType-reference="None" valueType-typeScope="000001E6E8257FA0"/>
+    <token id="000001E6E8309C30" file="alarm_monitor.h" linenr="9" column="10" str="," scope="000001E6E8257FA0"/>
+    <token id="000001E6E8309E10" file="alarm_monitor.h" linenr="10" column="2" str="AlarmOn" scope="000001E6E8257FA0" type="name" values="000001E6E89628F0" valueType-type="int" valueType-sign="signed" valueType-reference="None" valueType-typeScope="000001E6E8257FA0"/>
+    <token id="000001E6E8308F70" file="alarm_monitor.h" linenr="10" column="9" str="," scope="000001E6E8257FA0"/>
+    <token id="000001E6E83091B0" file="alarm_monitor.h" linenr="11" column="2" str="A_waiting" scope="000001E6E8257FA0" type="name" values="000001E6E8962830" valueType-type="int" valueType-sign="signed" valueType-reference="None" valueType-typeScope="000001E6E8257FA0"/>
+    <token id="000001E6E8309930" file="alarm_monitor.h" linenr="11" column="11" str="," scope="000001E6E8257FA0"/>
+    <token id="000001E6E83099F0" file="alarm_monitor.h" linenr="12" column="1" str="}" scope="000001E6E8257FA0" link="000001E6E8309870"/>
+    <token id="000001E6E830CBF0" file="alarm_monitor.h" linenr="12" column="0" str=";" scope="000001E6E8257B60"/>
+    <token id="000001E6E830C4D0" file="alarm_monitor.h" linenr="12" column="0" str="enum" scope="000001E6E8257B60" type="name"/>
+    <token id="000001E6E830D010" file="alarm_monitor.h" linenr="12" column="0" str="Anonymous2" scope="000001E6E8257B60" type="name" type-scope="000001E6E8257FA0"/>
+    <token id="000001E6E8309330" file="alarm_monitor.h" linenr="12" column="2" str="alarm" scope="000001E6E8257B60" type="name" varId="5" variable="000001E6E86FF9B0" valueType-type="int" valueType-sign="signed" valueType-reference="None" valueType-typeScope="000001E6E8257FA0"/>
+    <token id="000001E6E8309E70" file="alarm_monitor.h" linenr="12" column="7" str=";" scope="000001E6E8257B60"/>
+    <token id="000001E6E8309150" file="alarm_monitor.h" linenr="14" column="1" str="void" scope="000001E6E8257B60" type="name" isExpandedMacro="true"/>
+    <token id="000001E6E8309A50" file="alarm_monitor.h" linenr="14" column="1" str="ST_AlarmOff" scope="000001E6E8257B60" type="name" function="000001E6E8C0B510"/>
+    <token id="000001E6E8309AB0" file="alarm_monitor.h" linenr="14" column="1" str="(" scope="000001E6E8257B60" isExpandedMacro="true" link="000001E6E8309B70" valueType-type="void" valueType-reference="None"/>
+    <token id="000001E6E8309B70" file="alarm_monitor.h" linenr="14" column="1" str=")" scope="000001E6E8257B60" isExpandedMacro="true" link="000001E6E8309AB0"/>
+    <token id="000001E6E8309B10" file="alarm_monitor.h" linenr="14" column="23" str=";" scope="000001E6E8257B60"/>
+    <token id="000001E6E8309BD0" file="alarm_monitor.h" linenr="15" column="1" str="void" scope="000001E6E8257B60" type="name" isExpandedMacro="true"/>
+    <token id="000001E6E8309390" file="alarm_monitor.h" linenr="15" column="1" str="ST_AlarmOn" scope="000001E6E8257B60" type="name" function="000001E6E8C0B830"/>
+    <token id="000001E6E8309C90" file="alarm_monitor.h" linenr="15" column="1" str="(" scope="000001E6E8257B60" isExpandedMacro="true" link="000001E6E8309D50" valueType-type="void" valueType-reference="None"/>
+    <token id="000001E6E8309D50" file="alarm_monitor.h" linenr="15" column="1" str=")" scope="000001E6E8257B60" isExpandedMacro="true" link="000001E6E8309C90"/>
+    <token id="000001E6E830AF40" file="alarm_monitor.h" linenr="15" column="22" str=";" scope="000001E6E8257B60"/>
+    <token id="000001E6E830AEE0" file="alarm_monitor.h" linenr="16" column="1" str="void" scope="000001E6E8257B60" type="name" isExpandedMacro="true"/>
+    <token id="000001E6E830AD60" file="alarm_monitor.h" linenr="16" column="1" str="ST_A_waiting" scope="000001E6E8257B60" type="name" function="000001E6E8C0A430"/>
+    <token id="000001E6E830B6C0" file="alarm_monitor.h" linenr="16" column="1" str="(" scope="000001E6E8257B60" isExpandedMacro="true" link="000001E6E830A700" valueType-type="void" valueType-reference="None"/>
+    <token id="000001E6E830A700" file="alarm_monitor.h" linenr="16" column="1" str=")" scope="000001E6E8257B60" isExpandedMacro="true" link="000001E6E830B6C0"/>
+    <token id="000001E6E830A640" file="alarm_monitor.h" linenr="16" column="24" str=";" scope="000001E6E8257B60"/>
+    <token id="000001E6E830B000" file="alarm_monitor.h" linenr="18" column="1" str="void" scope="000001E6E8257B60" type="name" astParent="000001E6E830B2A0"/>
+    <token id="000001E6E830B2A0" file="alarm_monitor.h" linenr="18" column="6" str="(" scope="000001E6E8257B60" link="000001E6E830A340" astParent="000001E6E830DC70" astOperand1="000001E6E830B000" astOperand2="000001E6E830B120" valueType-type="void" valueType-reference="None"/>
+    <token id="000001E6E830B120" file="alarm_monitor.h" linenr="18" column="7" str="*" scope="000001E6E8257B60" type="op" isArithmeticalOp="true" astParent="000001E6E830B2A0" astOperand1="000001E6E830A7C0" valueType-type="void" valueType-reference="None"/>
+    <token id="000001E6E830A7C0" file="alarm_monitor.h" linenr="18" column="9" str="A_STATE" scope="000001E6E8257B60" type="name" varId="6" variable="000001E6E86FFB00" astParent="000001E6E830B120" valueType-type="void" valueType-pointer="1" valueType-reference="None"/>
+    <token id="000001E6E830A340" file="alarm_monitor.h" linenr="18" column="16" str=")" scope="000001E6E8257B60" link="000001E6E830B2A0"/>
+    <token id="000001E6E830DC70" file="alarm_monitor.h" linenr="18" column="0" str="(" scope="000001E6E8257B60" link="000001E6E830DDF0" astOperand1="000001E6E830B2A0"/>
+    <token id="000001E6E830DDF0" file="alarm_monitor.h" linenr="18" column="0" str=")" scope="000001E6E8257B60" link="000001E6E830DC70"/>
+    <token id="000001E6E830A040" file="alarm_monitor.h" linenr="18" column="20" str=";" scope="000001E6E8257B60"/>
+    <token id="000001E6E830ADC0" file="driver.h" linenr="25" column="1" str="void" scope="000001E6E8257B60" type="name"/>
+    <token id="000001E6E830A0A0" file="driver.h" linenr="25" column="6" str="Delay" scope="000001E6E8257B60" type="name" function="000001E6E8C0A6B0"/>
+    <token id="000001E6E830A100" file="driver.h" linenr="25" column="11" str="(" scope="000001E6E8257B60" link="000001E6E830ABE0" valueType-type="void" valueType-reference="None"/>
+    <token id="000001E6E830A5E0" file="driver.h" linenr="25" column="12" str="int" scope="000001E6E8257B60" type="name"/>
+    <token id="000001E6E830A1C0" file="driver.h" linenr="25" column="16" str="nCount" scope="000001E6E8257B60" type="name" varId="7" variable="000001E6E8702570" valueType-type="int" valueType-sign="signed" valueType-reference="None"/>
+    <token id="000001E6E830ABE0" file="driver.h" linenr="25" column="22" str=")" scope="000001E6E8257B60" link="000001E6E830A100"/>
+    <token id="000001E6E830AA60" file="driver.h" linenr="25" column="23" str=";" scope="000001E6E8257B60"/>
+    <token id="000001E6E830A520" file="driver.h" linenr="26" column="1" str="int" scope="000001E6E8257B60" type="name"/>
+    <token id="000001E6E830B180" file="driver.h" linenr="26" column="5" str="getPressureVal" scope="000001E6E8257B60" type="name" function="000001E6E8C0A750"/>
+    <token id="000001E6E830A220" file="driver.h" linenr="26" column="19" str="(" scope="000001E6E8257B60" link="000001E6E830B660" valueType-type="int" valueType-sign="signed" valueType-reference="None"/>
+    <token id="000001E6E830B660" file="driver.h" linenr="26" column="20" str=")" scope="000001E6E8257B60" link="000001E6E830A220"/>
+    <token id="000001E6E830AA00" file="driver.h" linenr="26" column="21" str=";" scope="000001E6E8257B60"/>
+    <token id="000001E6E830B4E0" file="driver.h" linenr="27" column="1" str="void" scope="000001E6E8257B60" type="name"/>
+    <token id="000001E6E830A940" file="driver.h" linenr="27" column="6" str="Set_Alarm_actuator" scope="000001E6E8257B60" type="name" function="000001E6E8C0AB10"/>
+    <token id="000001E6E830B0C0" file="driver.h" linenr="27" column="24" str="(" scope="000001E6E8257B60" link="000001E6E830B5A0" valueType-type="void" valueType-reference="None"/>
+    <token id="000001E6E830A160" file="driver.h" linenr="27" column="25" str="int" scope="000001E6E8257B60" type="name"/>
+    <token id="000001E6E8309F80" file="driver.h" linenr="27" column="29" str="i" scope="000001E6E8257B60" type="name" varId="8" variable="000001E6E8702730" valueType-type="int" valueType-sign="signed" valueType-reference="None"/>
+    <token id="000001E6E830B5A0" file="driver.h" linenr="27" column="30" str=")" scope="000001E6E8257B60" link="000001E6E830B0C0"/>
+    <token id="000001E6E830A9A0" file="driver.h" linenr="27" column="31" str=";" scope="000001E6E8257B60"/>
+    <token id="000001E6E830B1E0" file="driver.h" linenr="28" column="1" str="void" scope="000001E6E8257B60" type="name"/>
+    <token id="000001E6E830AFA0" file="driver.h" linenr="28" column="6" str="GPIO_INITIALIZATION" scope="000001E6E8257B60" type="name" function="000001E6E8C0BF10"/>
+    <token id="000001E6E830B240" file="driver.h" linenr="28" column="26" str="(" scope="000001E6E8257B60" link="000001E6E830B420" valueType-type="void" valueType-reference="None"/>
+    <token id="000001E6E830B420" file="driver.h" linenr="28" column="27" str=")" scope="000001E6E8257B60" link="000001E6E830B240"/>
+    <token id="000001E6E830A760" file="driver.h" linenr="28" column="28" str=";" scope="000001E6E8257B60"/>
+    <token id="000001E6E830ACA0" file="Algo.h" linenr="8" column="1" str="enum" scope="000001E6E8257B60" type="name"/>
+    <token id="000001E6E830C3B0" file="Algo.h" linenr="8" column="0" str="Anonymous3" scope="000001E6E8257B60" type="name" type-scope="000001E6E82583E0"/>
+    <token id="000001E6E830AD00" file="Algo.h" linenr="8" column="6" str="{" scope="000001E6E82583E0" link="000001E6E830A6A0"/>
+    <token id="000001E6E830AC40" file="Algo.h" linenr="9" column="2" str="High_Pressure_Detection" scope="000001E6E82583E0" type="name" values="000001E6E8962790" valueType-type="int" valueType-sign="signed" valueType-reference="None" valueType-typeScope="000001E6E82583E0"/>
+    <token id="000001E6E830A6A0" file="Algo.h" linenr="10" column="1" str="}" scope="000001E6E82583E0" link="000001E6E830AD00"/>
+    <token id="000001E6E830D070" file="Algo.h" linenr="10" column="0" str=";" scope="000001E6E8257B60"/>
+    <token id="000001E6E830C890" file="Algo.h" linenr="10" column="0" str="enum" scope="000001E6E8257B60" type="name"/>
+    <token id="000001E6E830C830" file="Algo.h" linenr="10" column="0" str="Anonymous3" scope="000001E6E8257B60" type="name" type-scope="000001E6E82583E0"/>
+    <token id="000001E6E830B300" file="Algo.h" linenr="10" column="2" str="algo" scope="000001E6E8257B60" type="name" varId="9" variable="000001E6E86FFC50" valueType-type="int" valueType-sign="signed" valueType-reference="None" valueType-typeScope="000001E6E82583E0"/>
+    <token id="000001E6E830B360" file="Algo.h" linenr="10" column="6" str=";" scope="000001E6E8257B60"/>
+    <token id="000001E6E830B3C0" file="Algo.h" linenr="13" column="1" str="void" scope="000001E6E8257B60" type="name" isExpandedMacro="true"/>
+    <token id="000001E6E830B480" file="Algo.h" linenr="13" column="1" str="ST_High_Pressure_Detection" scope="000001E6E8257B60" type="name" function="000001E6E8C0A110"/>
+    <token id="000001E6E830B720" file="Algo.h" linenr="13" column="1" str="(" scope="000001E6E8257B60" isExpandedMacro="true" link="000001E6E8309FE0" valueType-type="void" valueType-reference="None"/>
+    <token id="000001E6E8309FE0" file="Algo.h" linenr="13" column="1" str=")" scope="000001E6E8257B60" isExpandedMacro="true" link="000001E6E830B720"/>
+    <token id="000001E6E830A580" file="Algo.h" linenr="13" column="38" str=";" scope="000001E6E8257B60"/>
+    <token id="000001E6E830A280" file="Algo.h" linenr="16" column="1" str="void" scope="000001E6E8257B60" type="name" astParent="000001E6E830A2E0"/>
+    <token id="000001E6E830A2E0" file="Algo.h" linenr="16" column="6" str="(" scope="000001E6E8257B60" link="000001E6E830A460" astParent="000001E6E830DA30" astOperand1="000001E6E830A280" astOperand2="000001E6E830A3A0" valueType-type="void" valueType-reference="None"/>
+    <token id="000001E6E830A3A0" file="Algo.h" linenr="16" column="7" str="*" scope="000001E6E8257B60" type="op" isArithmeticalOp="true" astParent="000001E6E830A2E0" astOperand1="000001E6E830A400" valueType-type="void" valueType-reference="None"/>
+    <token id="000001E6E830A400" file="Algo.h" linenr="16" column="9" str="Algo_STATE" scope="000001E6E8257B60" type="name" varId="10" variable="000001E6E87017E0" astParent="000001E6E830A3A0" valueType-type="void" valueType-pointer="1" valueType-reference="None"/>
+    <token id="000001E6E830A460" file="Algo.h" linenr="16" column="19" str=")" scope="000001E6E8257B60" link="000001E6E830A2E0"/>
+    <token id="000001E6E830DA30" file="Algo.h" linenr="16" column="0" str="(" scope="000001E6E8257B60" link="000001E6E830DE50" astOperand1="000001E6E830A2E0"/>
+    <token id="000001E6E830DE50" file="Algo.h" linenr="16" column="0" str=")" scope="000001E6E8257B60" link="000001E6E830DA30"/>
+    <token id="000001E6E830A4C0" file="Algo.h" linenr="16" column="23" str=";" scope="000001E6E8257B60"/>
+    <token id="000001E6E830A820" file="main.c" linenr="13" column="1" str="void" scope="000001E6E8257B60" type="name"/>
+    <token id="000001E6E830A880" file="main.c" linenr="13" column="6" str="setup" scope="000001E6E8257B60" type="name" function="000001E6E8C0BDD0"/>
+    <token id="000001E6E830AE20" file="main.c" linenr="13" column="11" str="(" scope="000001E6E8257B60" link="000001E6E830AAC0" valueType-type="void" valueType-reference="None"/>
+    <token id="000001E6E830AAC0" file="main.c" linenr="13" column="12" str=")" scope="000001E6E8257B60" link="000001E6E830AE20"/>
+    <token id="000001E6E830AB20" file="main.c" linenr="13" column="14" str="{" scope="000001E6E8258600" link="000001E6E830D0D0"/>
+    <token id="000001E6E830AB80" file="main.c" linenr="15" column="2" str="init" scope="000001E6E8258600" type="name" function="000001E6E8C0A930" astParent="000001E6E830AE80"/>
+    <token id="000001E6E830AE80" file="main.c" linenr="15" column="6" str="(" scope="000001E6E8258600" link="000001E6E830BB40" astOperand1="000001E6E830AB80" valueType-type="void" valueType-reference="None"/>
+    <token id="000001E6E830BB40" file="main.c" linenr="15" column="7" str=")" scope="000001E6E8258600" link="000001E6E830AE80"/>
+    <token id="000001E6E830B960" file="main.c" linenr="15" column="8" str=";" scope="000001E6E8258600"/>
+    <token id="000001E6E830BAE0" file="main.c" linenr="16" column="2" str="Sensor_init" scope="000001E6E8258600" type="name" function="000001E6E8C0BD30" astParent="000001E6E830BDE0"/>
+    <token id="000001E6E830BDE0" file="main.c" linenr="16" column="13" str="(" scope="000001E6E8258600" link="000001E6E830BCC0" astOperand1="000001E6E830BAE0" valueType-type="void" valueType-reference="None"/>
+    <token id="000001E6E830BCC0" file="main.c" linenr="16" column="14" str=")" scope="000001E6E8258600" link="000001E6E830BDE0"/>
+    <token id="000001E6E830B8A0" file="main.c" linenr="16" column="15" str=";" scope="000001E6E8258600"/>
+    <token id="000001E6E830B9C0" file="main.c" linenr="17" column="2" str="A_STATE" scope="000001E6E8258600" type="name" varId="6" variable="000001E6E86FFB00" astParent="000001E6E830BA20" valueType-type="void" valueType-pointer="1" valueType-reference="None"/>
+    <token id="000001E6E830BA20" file="main.c" linenr="17" column="10" str="=" scope="000001E6E8258600" type="op" isAssignmentOp="true" astOperand1="000001E6E830B9C0" astOperand2="000001E6E830BBA0" valueType-type="void" valueType-pointer="1" valueType-reference="None"/>
+    <token id="000001E6E830BBA0" file="main.c" linenr="17" column="13" str="ST_AlarmOff" scope="000001E6E8258600" type="name" astParent="000001E6E830BA20"/>
+    <token id="000001E6E830BD20" file="main.c" linenr="17" column="28" str=";" scope="000001E6E8258600"/>
+    <token id="000001E6E830BA80" file="main.c" linenr="18" column="2" str="Sen_STATE" scope="000001E6E8258600" type="name" varId="2" variable="000001E6E8700740" astParent="000001E6E830B7E0" valueType-type="void" valueType-pointer="1" valueType-reference="None"/>
+    <token id="000001E6E830B7E0" file="main.c" linenr="18" column="12" str="=" scope="000001E6E8258600" type="op" isAssignmentOp="true" astOperand1="000001E6E830BA80" astOperand2="000001E6E830BE40" valueType-type="void" valueType-pointer="1" valueType-reference="None"/>
+    <token id="000001E6E830BE40" file="main.c" linenr="18" column="14" str="ST_reading" scope="000001E6E8258600" type="name" astParent="000001E6E830B7E0"/>
+    <token id="000001E6E830B780" file="main.c" linenr="18" column="28" str=";" scope="000001E6E8258600"/>
+    <token id="000001E6E830BD80" file="main.c" linenr="19" column="2" str="Algo_STATE" scope="000001E6E8258600" type="name" varId="10" variable="000001E6E87017E0" astParent="000001E6E830BEA0" valueType-type="void" valueType-pointer="1" valueType-reference="None"/>
+    <token id="000001E6E830BEA0" file="main.c" linenr="19" column="13" str="=" scope="000001E6E8258600" type="op" isAssignmentOp="true" astOperand1="000001E6E830BD80" astOperand2="000001E6E830B900" valueType-type="void" valueType-pointer="1" valueType-reference="None"/>
+    <token id="000001E6E830B900" file="main.c" linenr="19" column="15" str="ST_High_Pressure_Detection" scope="000001E6E8258600" type="name" astParent="000001E6E830BEA0"/>
+    <token id="000001E6E830BC00" file="main.c" linenr="19" column="45" str=";" scope="000001E6E8258600"/>
+    <token id="000001E6E830BC60" file="main.c" linenr="20" column="2" str="stop_alarm" scope="000001E6E8258600" type="name" function="000001E6E826B7F0" astParent="000001E6E830B840"/>
+    <token id="000001E6E830B840" file="main.c" linenr="20" column="12" str="(" scope="000001E6E8258600" link="000001E6E830CE30" astOperand1="000001E6E830BC60" valueType-type="void" valueType-reference="None"/>
+    <token id="000001E6E830CE30" file="main.c" linenr="20" column="13" str=")" scope="000001E6E8258600" link="000001E6E830B840"/>
+    <token id="000001E6E830D670" file="main.c" linenr="20" column="14" str=";" scope="000001E6E8258600"/>
+    <token id="000001E6E830CA10" file="main.c" linenr="21" column="2" str="Act_STATE" scope="000001E6E8258600" type="name" varId="4" variable="000001E6E87007B0" astParent="000001E6E830D4F0" valueType-type="void" valueType-pointer="1" valueType-reference="None"/>
+    <token id="000001E6E830D4F0" file="main.c" linenr="21" column="12" str="=" scope="000001E6E8258600" type="op" isAssignmentOp="true" astOperand1="000001E6E830CA10" astOperand2="000001E6E830CD70" valueType-type="void" valueType-pointer="1" valueType-reference="None"/>
+    <token id="000001E6E830CD70" file="main.c" linenr="21" column="14" str="ST_act_wait" scope="000001E6E8258600" type="name" astParent="000001E6E830D4F0"/>
+    <token id="000001E6E830C5F0" file="main.c" linenr="21" column="29" str=";" scope="000001E6E8258600"/>
+    <token id="000001E6E830D0D0" file="main.c" linenr="22" column="1" str="}" scope="000001E6E8258600" link="000001E6E830AB20"/>
+    <token id="000001E6E830C170" file="main.c" linenr="24" column="1" str="int" scope="000001E6E8257B60" type="name"/>
+    <token id="000001E6E830BF90" file="main.c" linenr="24" column="5" str="main" scope="000001E6E8257B60" type="name" function="000001E6E8C0B1F0"/>
+    <token id="000001E6E830D550" file="main.c" linenr="24" column="10" str="(" scope="000001E6E8257B60" link="000001E6E830C950" valueType-type="int" valueType-sign="signed" valueType-reference="None"/>
+    <token id="000001E6E830C950" file="main.c" linenr="24" column="11" str=")" scope="000001E6E8257B60" link="000001E6E830D550"/>
+    <token id="000001E6E830D190" file="main.c" linenr="24" column="12" str="{" scope="000001E6E8257C70" link="000001E6E830C1D0"/>
+    <token id="000001E6E830CF50" file="main.c" linenr="25" column="2" str="GPIO_INITIALIZATION" scope="000001E6E8257C70" type="name" function="000001E6E8C0BF10" astParent="000001E6E830D130"/>
+    <token id="000001E6E830D130" file="main.c" linenr="25" column="21" str="(" scope="000001E6E8257C70" link="000001E6E830D430" astOperand1="000001E6E830CF50" valueType-type="void" valueType-reference="None"/>
+    <token id="000001E6E830D430" file="main.c" linenr="25" column="22" str=")" scope="000001E6E8257C70" link="000001E6E830D130"/>
+    <token id="000001E6E830C710" file="main.c" linenr="25" column="23" str=";" scope="000001E6E8257C70"/>
+    <token id="000001E6E830CCB0" file="main.c" linenr="26" column="2" str="setup" scope="000001E6E8257C70" type="name" function="000001E6E8C0BDD0" astParent="000001E6E830CD10"/>
+    <token id="000001E6E830CD10" file="main.c" linenr="26" column="7" str="(" scope="000001E6E8257C70" link="000001E6E830C9B0" astOperand1="000001E6E830CCB0" valueType-type="void" valueType-reference="None"/>
+    <token id="000001E6E830C9B0" file="main.c" linenr="26" column="8" str=")" scope="000001E6E8257C70" link="000001E6E830CD10"/>
+    <token id="000001E6E830D1F0" file="main.c" linenr="26" column="9" str=";" scope="000001E6E8257C70"/>
+    <token id="000001E6E830C650" file="main.c" linenr="27" column="2" str="while" scope="000001E6E8257C70" type="name" astParent="000001E6E830D250"/>
+    <token id="000001E6E830D250" file="main.c" linenr="27" column="8" str="(" scope="000001E6E8257C70" link="000001E6E830D370" astOperand1="000001E6E830C650" astOperand2="000001E6E830D2B0"/>
+    <token id="000001E6E830D2B0" file="main.c" linenr="27" column="9" str="1" scope="000001E6E8257C70" type="number" isInt="true" values="000001E6E8962350" astParent="000001E6E830D250" valueType-type="int" valueType-sign="signed" valueType-reference="None"/>
+    <token id="000001E6E830D370" file="main.c" linenr="27" column="10" str=")" scope="000001E6E8257C70" link="000001E6E830D250"/>
+    <token id="000001E6E830C0B0" file="main.c" linenr="28" column="2" str="{" scope="000001E6E82584F0" link="000001E6E830CAD0"/>
+    <token id="000001E6E830CA70" file="main.c" linenr="29" column="3" str="Sen_STATE" scope="000001E6E82584F0" type="name" varId="2" variable="000001E6E8700740" astParent="000001E6E830D730" valueType-type="void" valueType-pointer="1" valueType-reference="None"/>
+    <token id="000001E6E830D730" file="main.c" linenr="29" column="12" str="(" scope="000001E6E82584F0" link="000001E6E830D490" astOperand1="000001E6E830CA70" valueType-type="void" valueType-reference="None"/>
+    <token id="000001E6E830D490" file="main.c" linenr="29" column="13" str=")" scope="000001E6E82584F0" link="000001E6E830D730"/>
+    <token id="000001E6E830C530" file="main.c" linenr="29" column="14" str=";" scope="000001E6E82584F0"/>
+    <token id="000001E6E830D5B0" file="main.c" linenr="30" column="3" str="Algo_STATE" scope="000001E6E82584F0" type="name" varId="10" variable="000001E6E87017E0" astParent="000001E6E830D310" valueType-type="void" valueType-pointer="1" valueType-reference="None"/>
+    <token id="000001E6E830D310" file="main.c" linenr="30" column="13" str="(" scope="000001E6E82584F0" link="000001E6E830D6D0" astOperand1="000001E6E830D5B0" valueType-type="void" valueType-reference="None"/>
+    <token id="000001E6E830D6D0" file="main.c" linenr="30" column="14" str=")" scope="000001E6E82584F0" link="000001E6E830D310"/>
+    <token id="000001E6E830D3D0" file="main.c" linenr="30" column="15" str=";" scope="000001E6E82584F0"/>
+    <token id="000001E6E830D610" file="main.c" linenr="31" column="3" str="A_STATE" scope="000001E6E82584F0" type="name" varId="6" variable="000001E6E86FFB00" astParent="000001E6E830CFB0" valueType-type="void" valueType-pointer="1" valueType-reference="None"/>
+    <token id="000001E6E830CFB0" file="main.c" linenr="31" column="10" str="(" scope="000001E6E82584F0" link="000001E6E830C8F0" astOperand1="000001E6E830D610" valueType-type="void" valueType-reference="None"/>
+    <token id="000001E6E830C8F0" file="main.c" linenr="31" column="11" str=")" scope="000001E6E82584F0" link="000001E6E830CFB0"/>
+    <token id="000001E6E830C2F0" file="main.c" linenr="31" column="12" str=";" scope="000001E6E82584F0"/>
+    <token id="000001E6E830C350" file="main.c" linenr="32" column="3" str="Act_STATE" scope="000001E6E82584F0" type="name" varId="4" variable="000001E6E87007B0" astParent="000001E6E830BFF0" valueType-type="void" valueType-pointer="1" valueType-reference="None"/>
+    <token id="000001E6E830BFF0" file="main.c" linenr="32" column="12" str="(" scope="000001E6E82584F0" link="000001E6E830CDD0" astOperand1="000001E6E830C350" valueType-type="void" valueType-reference="None"/>
+    <token id="000001E6E830CDD0" file="main.c" linenr="32" column="13" str=")" scope="000001E6E82584F0" link="000001E6E830BFF0"/>
+    <token id="000001E6E830C050" file="main.c" linenr="32" column="14" str=";" scope="000001E6E82584F0"/>
+    <token id="000001E6E830C6B0" file="main.c" linenr="34" column="3" str="Delay" scope="000001E6E82584F0" type="name" function="000001E6E8C0A6B0" astParent="000001E6E830C110"/>
+    <token id="000001E6E830C110" file="main.c" linenr="34" column="8" str="(" scope="000001E6E82584F0" link="000001E6E830CC50" astOperand1="000001E6E830C6B0" astOperand2="000001E6E830C770" valueType-type="void" valueType-reference="None"/>
+    <token id="000001E6E830C770" file="main.c" linenr="34" column="9" str="10000" scope="000001E6E82584F0" type="number" isInt="true" values="000001E6E89624F0" astParent="000001E6E830C110" valueType-type="int" valueType-sign="signed" valueType-reference="None"/>
+    <token id="000001E6E830CC50" file="main.c" linenr="34" column="14" str=")" scope="000001E6E82584F0" link="000001E6E830C110"/>
+    <token id="000001E6E830C590" file="main.c" linenr="34" column="15" str=";" scope="000001E6E82584F0"/>
+    <token id="000001E6E830CAD0" file="main.c" linenr="36" column="2" str="}" scope="000001E6E82584F0" link="000001E6E830C0B0"/>
+    <token id="000001E6E830C1D0" file="main.c" linenr="38" column="1" str="}" scope="000001E6E8257C70" link="000001E6E830D190"/>
+  </tokenlist>
+  <scopes>
+    <scope id="000001E6E8257B60" type="Global">
+      <functionList>
+        <function id="000001E6E826BD90" tokenDef="000001E6E89617A0" name="set_pval" type="Function"/>
+        <function id="000001E6E826BE30" tokenDef="000001E6E8961AA0" name="detect_high_pressure" type="Function"/>
+        <function id="000001E6E826B750" tokenDef="000001E6E8961B60" name="start_alarm" type="Function"/>
+        <function id="000001E6E826B7F0" tokenDef="000001E6E8961BC0" name="stop_alarm" type="Function"/>
+        <function id="000001E6E826B930" tokenDef="000001E6E826B290" name="ST_reading" type="Function"/>
+        <function id="000001E6E826BA70" tokenDef="000001E6E826A870" name="ST_waiting" type="Function"/>
+        <function id="000001E6E8C0BD30" tokenDef="000001E6E826AFF0" name="Sensor_init" type="Function"/>
+        <function id="000001E6E8C0A930" tokenDef="000001E6E826B3B0" name="init" type="Function"/>
+        <function id="000001E6E8C0ACF0" tokenDef="000001E6E826B1D0" name="ST_act_wait" type="Function"/>
+        <function id="000001E6E8C0BAB0" tokenDef="000001E6E8309750" name="ST_act_off" type="Function"/>
+        <function id="000001E6E8C0BC90" tokenDef="000001E6E8309270" name="ST_act_on" type="Function"/>
+        <function id="000001E6E8C0B510" tokenDef="000001E6E8309A50" name="ST_AlarmOff" type="Function"/>
+        <function id="000001E6E8C0B830" tokenDef="000001E6E8309390" name="ST_AlarmOn" type="Function"/>
+        <function id="000001E6E8C0A430" tokenDef="000001E6E830AD60" name="ST_A_waiting" type="Function"/>
+        <function id="000001E6E8C0A6B0" tokenDef="000001E6E830A0A0" name="Delay" type="Function">
+          <arg nr="1" variable="000001E6E8702570"/>
+        </function>
+        <function id="000001E6E8C0A750" tokenDef="000001E6E830B180" name="getPressureVal" type="Function"/>
+        <function id="000001E6E8C0AB10" tokenDef="000001E6E830A940" name="Set_Alarm_actuator" type="Function">
+          <arg nr="1" variable="000001E6E8702730"/>
+        </function>
+        <function id="000001E6E8C0BF10" tokenDef="000001E6E830AFA0" name="GPIO_INITIALIZATION" type="Function"/>
+        <function id="000001E6E8C0A110" tokenDef="000001E6E830B480" name="ST_High_Pressure_Detection" type="Function"/>
+        <function id="000001E6E8C0BDD0" tokenDef="000001E6E830A880" name="setup" type="Function"/>
+        <function id="000001E6E8C0B1F0" tokenDef="000001E6E830BF90" name="main" type="Function"/>
+      </functionList>
+      <varlist>
+        <var id="000001E6E86FFE10"/>
+        <var id="000001E6E8700740"/>
+        <var id="000001E6E87005F0"/>
+        <var id="000001E6E87007B0"/>
+        <var id="000001E6E86FF9B0"/>
+        <var id="000001E6E86FFB00"/>
+        <var id="000001E6E86FFC50"/>
+        <var id="000001E6E87017E0"/>
+      </varlist>
+    </scope>
+    <scope id="000001E6E82581C0" type="Enum" className="Anonymous0" bodyStart="000001E6E8961800" bodyEnd="000001E6E89615C0" nestedIn="000001E6E8257B60"/>
+    <scope id="000001E6E82582D0" type="Enum" className="Anonymous1" bodyStart="000001E6E826B170" bodyEnd="000001E6E826AE70" nestedIn="000001E6E8257B60"/>
+    <scope id="000001E6E8257FA0" type="Enum" className="Anonymous2" bodyStart="000001E6E8309870" bodyEnd="000001E6E83099F0" nestedIn="000001E6E8257B60"/>
+    <scope id="000001E6E82583E0" type="Enum" className="Anonymous3" bodyStart="000001E6E830AD00" bodyEnd="000001E6E830A6A0" nestedIn="000001E6E8257B60"/>
+    <scope id="000001E6E8258600" type="Function" className="setup" bodyStart="000001E6E830AB20" bodyEnd="000001E6E830D0D0" nestedIn="000001E6E8257B60" function="000001E6E8C0BDD0"/>
+    <scope id="000001E6E8257C70" type="Function" className="main" bodyStart="000001E6E830D190" bodyEnd="000001E6E830C1D0" nestedIn="000001E6E8257B60" function="000001E6E8C0B1F0"/>
+    <scope id="000001E6E82584F0" type="While" bodyStart="000001E6E830C0B0" bodyEnd="000001E6E830CAD0" nestedIn="000001E6E8257C70"/>
+  </scopes>
+  <variables>
+    <var id="000001E6E86FF9B0" nameToken="000001E6E8309330" typeStartToken="000001E6E830D010" typeEndToken="000001E6E830D010" access="Global" scope="000001E6E8257B60" constness="0" isArgument="false" isArray="false" isClass="false" isConst="false" isExtern="false" isLocal="false" isPointer="false" isReference="false" isStatic="false"/>
+    <var id="000001E6E86FFB00" nameToken="000001E6E830A7C0" typeStartToken="000001E6E830B000" typeEndToken="000001E6E830B120" access="Global" scope="000001E6E8257B60" constness="0" isArgument="false" isArray="false" isClass="false" isConst="false" isExtern="false" isLocal="false" isPointer="true" isReference="false" isStatic="false"/>
+    <var id="000001E6E86FFC50" nameToken="000001E6E830B300" typeStartToken="000001E6E830C830" typeEndToken="000001E6E830C830" access="Global" scope="000001E6E8257B60" constness="0" isArgument="false" isArray="false" isClass="false" isConst="false" isExtern="false" isLocal="false" isPointer="false" isReference="false" isStatic="false"/>
+    <var id="000001E6E86FFE10" nameToken="000001E6E8961680" typeStartToken="000001E6E830CB90" typeEndToken="000001E6E830CB90" access="Global" scope="000001E6E8257B60" constness="0" isArgument="false" isArray="false" isClass="false" isConst="false" isExtern="false" isLocal="false" isPointer="false" isReference="false" isStatic="false"/>
+    <var id="000001E6E87005F0" nameToken="000001E6E826AED0" typeStartToken="000001E6E830C7D0" typeEndToken="000001E6E830C7D0" access="Global" scope="000001E6E8257B60" constness="0" isArgument="false" isArray="false" isClass="false" isConst="false" isExtern="false" isLocal="false" isPointer="false" isReference="false" isStatic="false"/>
+    <var id="000001E6E8700740" nameToken="000001E6E826AF90" typeStartToken="000001E6E826B230" typeEndToken="000001E6E826A8D0" access="Global" scope="000001E6E8257B60" constness="0" isArgument="false" isArray="false" isClass="false" isConst="false" isExtern="false" isLocal="false" isPointer="true" isReference="false" isStatic="false"/>
+    <var id="000001E6E87007B0" nameToken="000001E6E83098D0" typeStartToken="000001E6E83094B0" typeEndToken="000001E6E83095D0" access="Global" scope="000001E6E8257B60" constness="0" isArgument="false" isArray="false" isClass="false" isConst="false" isExtern="false" isLocal="false" isPointer="true" isReference="false" isStatic="false"/>
+    <var id="000001E6E87017E0" nameToken="000001E6E830A400" typeStartToken="000001E6E830A280" typeEndToken="000001E6E830A3A0" access="Global" scope="000001E6E8257B60" constness="0" isArgument="false" isArray="false" isClass="false" isConst="false" isExtern="false" isLocal="false" isPointer="true" isReference="false" isStatic="false"/>
+    <var id="000001E6E8702570" nameToken="000001E6E830A1C0" typeStartToken="000001E6E830A5E0" typeEndToken="000001E6E830A5E0" access="Argument" scope="0000000000000000" constness="0" isArgument="true" isArray="false" isClass="false" isConst="false" isExtern="false" isLocal="false" isPointer="false" isReference="false" isStatic="false"/>
+    <var id="000001E6E8702730" nameToken="000001E6E8309F80" typeStartToken="000001E6E830A160" typeEndToken="000001E6E830A160" access="Argument" scope="0000000000000000" constness="0" isArgument="true" isArray="false" isClass="false" isConst="false" isExtern="false" isLocal="false" isPointer="false" isReference="false" isStatic="false"/>
+  </variables>
+  <valueflow>
+    <values id="000001E6E89629D0">
+      <value intvalue="0" known="true"/>
+    </values>
+    <values id="000001E6E8962510">
+      <value intvalue="1" known="true"/>
+    </values>
+    <values id="000001E6E89628B0">
+      <value intvalue="0" known="true"/>
+    </values>
+    <values id="000001E6E8962690">
+      <value intvalue="1" known="true"/>
+    </values>
+    <values id="000001E6E8962890">
+      <value intvalue="2" known="true"/>
+    </values>
+    <values id="000001E6E8962730">
+      <value intvalue="0" known="true"/>
+    </values>
+    <values id="000001E6E89628F0">
+      <value intvalue="1" known="true"/>
+    </values>
+    <values id="000001E6E8962830">
+      <value intvalue="2" known="true"/>
+    </values>
+    <values id="000001E6E8962790">
+      <value intvalue="0" known="true"/>
+    </values>
+    <values id="000001E6E8962350">
+      <value intvalue="1" known="true"/>
+    </values>
+    <values id="000001E6E89624F0">
+      <value intvalue="10000" known="true"/>
+    </values>
+  </valueflow>
+</dump>
+</dumps>
