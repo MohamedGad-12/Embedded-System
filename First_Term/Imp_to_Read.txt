@@ -10,6 +10,6 @@
 
 - Second Project: Student Information Management System
 
-- Drive:https://drive.google.com/drive/folders/1R7vhuGvSkEM7LMS1EGybv9KCbEQInFPu
+- Drive: https://drive.google.com/drive/folders/1R7vhuGvSkEM7LMS1EGybv9KCbEQInFPu
 
 #----------------------------------------------------------------------------------------#
