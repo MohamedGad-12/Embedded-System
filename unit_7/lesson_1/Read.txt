@@ -1,0 +1,9 @@
+- Videos:
+
+- Lab_1_(Stm32): leds.
+
+- Lab_1_(AtMega32): leds.
+
+- Lab_2_(AtMega32): Buzzers and sequential leds.
+
+- Lab_3_(Atmega32): 7-segment multiplexing.
