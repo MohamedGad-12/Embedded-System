@@ -1,0 +1,5 @@
+- Calculator: 
+	Using:
+	- AtMega32 Microcontroller.
+	- Lcd_(HD44780).	
+	- Keypad. 
