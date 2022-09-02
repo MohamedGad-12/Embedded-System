@@ -25,7 +25,7 @@ typedef volatile unsigned int vuint32_t ;
 #define EXTI_PR		    *(volatile uint32_t*)(EXTI + 0x14)
 
 #define AFIO	        0x40010000
-#define AFIO_EXTICR1    *(volatile uint32_t*)(AFIO + 0x00)
+#define AFIO_EXTICR1    *(volatile uint32_t*)(AFIO + 0x08)
 
 #define NVIC_ISER0		*(volatile uint32_t*)(0xE000E100)
 
