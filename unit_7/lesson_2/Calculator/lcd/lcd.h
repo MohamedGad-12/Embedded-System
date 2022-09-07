@@ -15,7 +15,7 @@
 #define RS_SWITCH 1
 #define RW_SWITCH 2
 #define EN_SWITCH 3
-#define DATA_shift 4 // in 8 bit mode 0 and in 4 bit mode 4 
+#define DATA_shift 0 // in 8 bit mode 0 and in 4 bit mode 4 
 
 #define EIGHT_BIT_MODE
 //#define FOUR_BIT_MODE
