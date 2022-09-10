@@ -1,0 +1,541 @@
+
+Drivers.elf:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .text         000002ca  00000000  00000000  00000094  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  1 .data         0000001e  00800060  000002ca  0000035e  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  2 .bss          00000002  0080007e  0080007e  0000037c  2**0
+                  ALLOC
+  3 .comment      00000030  00000000  00000000  0000037c  2**0
+                  CONTENTS, READONLY
+  4 .note.gnu.avr.deviceinfo 0000003c  00000000  00000000  000003ac  2**2
+                  CONTENTS, READONLY
+  5 .debug_aranges 000000e8  00000000  00000000  000003e8  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  6 .debug_info   00000f21  00000000  00000000  000004d0  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  7 .debug_abbrev 00000845  00000000  00000000  000013f1  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  8 .debug_line   000007dc  00000000  00000000  00001c36  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  9 .debug_frame  000001f8  00000000  00000000  00002414  2**2
+                  CONTENTS, READONLY, DEBUGGING
+ 10 .debug_str    00000514  00000000  00000000  0000260c  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 11 .debug_loc    000007d6  00000000  00000000  00002b20  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 12 .debug_ranges 000000b8  00000000  00000000  000032f6  2**0
+                  CONTENTS, READONLY, DEBUGGING
+
+Disassembly of section .text:
+
+00000000 <__vectors>:
+   0:	0c 94 2a 00 	jmp	0x54	; 0x54 <__ctors_end>
+   4:	0c 94 47 00 	jmp	0x8e	; 0x8e <__bad_interrupt>
+   8:	0c 94 47 00 	jmp	0x8e	; 0x8e <__bad_interrupt>
+   c:	0c 94 47 00 	jmp	0x8e	; 0x8e <__bad_interrupt>
+  10:	0c 94 47 00 	jmp	0x8e	; 0x8e <__bad_interrupt>
+  14:	0c 94 47 00 	jmp	0x8e	; 0x8e <__bad_interrupt>
+  18:	0c 94 47 00 	jmp	0x8e	; 0x8e <__bad_interrupt>
+  1c:	0c 94 47 00 	jmp	0x8e	; 0x8e <__bad_interrupt>
+  20:	0c 94 47 00 	jmp	0x8e	; 0x8e <__bad_interrupt>
+  24:	0c 94 47 00 	jmp	0x8e	; 0x8e <__bad_interrupt>
+  28:	0c 94 47 00 	jmp	0x8e	; 0x8e <__bad_interrupt>
+  2c:	0c 94 47 00 	jmp	0x8e	; 0x8e <__bad_interrupt>
+  30:	0c 94 47 00 	jmp	0x8e	; 0x8e <__bad_interrupt>
+  34:	0c 94 47 00 	jmp	0x8e	; 0x8e <__bad_interrupt>
+  38:	0c 94 47 00 	jmp	0x8e	; 0x8e <__bad_interrupt>
+  3c:	0c 94 47 00 	jmp	0x8e	; 0x8e <__bad_interrupt>
+  40:	0c 94 47 00 	jmp	0x8e	; 0x8e <__bad_interrupt>
+  44:	0c 94 47 00 	jmp	0x8e	; 0x8e <__bad_interrupt>
+  48:	0c 94 47 00 	jmp	0x8e	; 0x8e <__bad_interrupt>
+  4c:	0c 94 47 00 	jmp	0x8e	; 0x8e <__bad_interrupt>
+  50:	0c 94 47 00 	jmp	0x8e	; 0x8e <__bad_interrupt>
+
+00000054 <__ctors_end>:
+  54:	11 24       	eor	r1, r1
+  56:	1f be       	out	0x3f, r1	; 63
+  58:	cf e5       	ldi	r28, 0x5F	; 95
+  5a:	d8 e0       	ldi	r29, 0x08	; 8
+  5c:	de bf       	out	0x3e, r29	; 62
+  5e:	cd bf       	out	0x3d, r28	; 61
+
+00000060 <__do_copy_data>:
+  60:	10 e0       	ldi	r17, 0x00	; 0
+  62:	a0 e6       	ldi	r26, 0x60	; 96
+  64:	b0 e0       	ldi	r27, 0x00	; 0
+  66:	ea ec       	ldi	r30, 0xCA	; 202
+  68:	f2 e0       	ldi	r31, 0x02	; 2
+  6a:	02 c0       	rjmp	.+4      	; 0x70 <__do_copy_data+0x10>
+  6c:	05 90       	lpm	r0, Z+
+  6e:	0d 92       	st	X+, r0
+  70:	ae 37       	cpi	r26, 0x7E	; 126
+  72:	b1 07       	cpc	r27, r17
+  74:	d9 f7       	brne	.-10     	; 0x6c <__do_copy_data+0xc>
+
+00000076 <__do_clear_bss>:
+  76:	20 e0       	ldi	r18, 0x00	; 0
+  78:	ae e7       	ldi	r26, 0x7E	; 126
+  7a:	b0 e0       	ldi	r27, 0x00	; 0
+  7c:	01 c0       	rjmp	.+2      	; 0x80 <.do_clear_bss_start>
+
+0000007e <.do_clear_bss_loop>:
+  7e:	1d 92       	st	X+, r1
+
+00000080 <.do_clear_bss_start>:
+  80:	a0 38       	cpi	r26, 0x80	; 128
+  82:	b2 07       	cpc	r27, r18
+  84:	e1 f7       	brne	.-8      	; 0x7e <.do_clear_bss_loop>
+  86:	0e 94 3f 01 	call	0x27e	; 0x27e <main>
+  8a:	0c 94 63 01 	jmp	0x2c6	; 0x2c6 <_exit>
+
+0000008e <__bad_interrupt>:
+  8e:	0c 94 00 00 	jmp	0	; 0x0 <__vectors>
+
+00000092 <MCAL_GPIO_Pin_Init>:
+﻿#include "GPIO_Driver.h"
+#include "MemoMap.h"
+#include <stdint.h>
+
+void MCAL_GPIO_Pin_Init(uint8_t* GPIOx, uint8_t pin_number ,uint8_t MODE){
+	if(MODE == Output)
+  92:	41 30       	cpi	r20, 0x01	; 1
+  94:	61 f4       	brne	.+24     	; 0xae <MCAL_GPIO_Pin_Init+0x1c>
+	{
+		//output Mode
+	  ( (*(GPIOx-1)) |= (1<<pin_number) );
+  96:	fc 01       	movw	r30, r24
+  98:	21 e0       	ldi	r18, 0x01	; 1
+  9a:	30 e0       	ldi	r19, 0x00	; 0
+  9c:	02 c0       	rjmp	.+4      	; 0xa2 <MCAL_GPIO_Pin_Init+0x10>
+  9e:	22 0f       	add	r18, r18
+  a0:	33 1f       	adc	r19, r19
+  a2:	6a 95       	dec	r22
+  a4:	e2 f7       	brpl	.-8      	; 0x9e <MCAL_GPIO_Pin_Init+0xc>
+  a6:	82 91       	ld	r24, -Z
+  a8:	28 2b       	or	r18, r24
+  aa:	20 83       	st	Z, r18
+  ac:	08 95       	ret
+	}
+	else
+	{
+		//Input Mode
+		( (*(GPIOx-1)) &= ~(1<<pin_number) );
+  ae:	21 e0       	ldi	r18, 0x01	; 1
+  b0:	30 e0       	ldi	r19, 0x00	; 0
+  b2:	02 c0       	rjmp	.+4      	; 0xb8 <MCAL_GPIO_Pin_Init+0x26>
+  b4:	22 0f       	add	r18, r18
+  b6:	33 1f       	adc	r19, r19
+  b8:	6a 95       	dec	r22
+  ba:	e2 f7       	brpl	.-8      	; 0xb4 <MCAL_GPIO_Pin_Init+0x22>
+  bc:	62 2f       	mov	r22, r18
+  be:	60 95       	com	r22
+  c0:	fc 01       	movw	r30, r24
+  c2:	52 91       	ld	r21, -Z
+  c4:	56 23       	and	r21, r22
+  c6:	50 83       	st	Z, r21
+		//1- input pull_up
+		if (MODE == input_PU){
+  c8:	41 11       	cpse	r20, r1
+  ca:	08 c0       	rjmp	.+16     	; 0xdc <MCAL_GPIO_Pin_Init+0x4a>
+			( (*(GPIOx)) |= (1<<pin_number) ) ;
+  cc:	fc 01       	movw	r30, r24
+  ce:	30 81       	ld	r19, Z
+  d0:	23 2b       	or	r18, r19
+  d2:	20 83       	st	Z, r18
+			SFIOR &= ~(1<<2);   //Pin_2 in SFIOR register: PUD->Pull-up disable 
+  d4:	80 b7       	in	r24, 0x30	; 48
+  d6:	8b 7f       	andi	r24, 0xFB	; 251
+  d8:	80 bf       	out	0x30, r24	; 48
+  da:	08 95       	ret
+								// set 1 -> diasble pull_up
+								// set 0 -> enable pull_up
+		}
+		//2- FLoting input
+		else if (MODE == input_floating)
+  dc:	42 30       	cpi	r20, 0x02	; 2
+  de:	21 f4       	brne	.+8      	; 0xe8 <MCAL_GPIO_Pin_Init+0x56>
+		{
+			((*(GPIOx)) &= ~(1<<pin_number) );
+  e0:	fc 01       	movw	r30, r24
+  e2:	20 81       	ld	r18, Z
+  e4:	62 23       	and	r22, r18
+  e6:	60 83       	st	Z, r22
+  e8:	08 95       	ret
+
+000000ea <MCAL_GPIO_Init>:
+		}
+	}		
+}
+
+void MCAL_GPIO_Init(uint8_t* GPIOx,uint8_t MODE) {
+	if(MODE == Output)
+  ea:	61 30       	cpi	r22, 0x01	; 1
+  ec:	29 f4       	brne	.+10     	; 0xf8 <MCAL_GPIO_Init+0xe>
+	{
+		//output Mode
+		( (*(GPIOx-1)) = (GPIOx_Full) );
+  ee:	fc 01       	movw	r30, r24
+  f0:	31 97       	sbiw	r30, 0x01	; 1
+  f2:	2f ef       	ldi	r18, 0xFF	; 255
+  f4:	20 83       	st	Z, r18
+  f6:	08 95       	ret
+	}
+	else
+	{
+		//Input Mode
+		 ( (*(GPIOx-1)) = (0x00) );
+  f8:	fc 01       	movw	r30, r24
+  fa:	31 97       	sbiw	r30, 0x01	; 1
+  fc:	10 82       	st	Z, r1
+		//1- input pull_up
+		if (MODE == input_PU){
+  fe:	61 11       	cpse	r22, r1
+ 100:	07 c0       	rjmp	.+14     	; 0x110 <MCAL_GPIO_Init+0x26>
+			( (*(GPIOx)) ) = (GPIOx_Full) ;
+ 102:	2f ef       	ldi	r18, 0xFF	; 255
+ 104:	fc 01       	movw	r30, r24
+ 106:	20 83       	st	Z, r18
+			SFIOR &= ~(1<<2);   
+ 108:	80 b7       	in	r24, 0x30	; 48
+ 10a:	8b 7f       	andi	r24, 0xFB	; 251
+ 10c:	80 bf       	out	0x30, r24	; 48
+ 10e:	08 95       	ret
+			//Pin_2 in SFIOR register: PUD->Pull-up disable
+			// set 1 -> diasble pull_up
+			// set 0 -> enable pull_up
+		}
+		//2- FLoting input
+		else if (MODE == input_floating)
+ 110:	62 30       	cpi	r22, 0x02	; 2
+ 112:	11 f4       	brne	.+4      	; 0x118 <MCAL_GPIO_Init+0x2e>
+		{
+			( (*(GPIOx)) = (0x00) );
+ 114:	fc 01       	movw	r30, r24
+ 116:	10 82       	st	Z, r1
+ 118:	08 95       	ret
+
+0000011a <LCD_lcd_kick>:
+	if (line == 2)
+	{
+		if (position < 16 && position >= 0)
+		{
+			curser = 16;
+			LCD_WRITE_COMMAND(LCD_BEGIN_AT_SECOND_ROW+position);
+ 11a:	c3 9a       	sbi	0x18, 3	; 24
+ 11c:	83 ed       	ldi	r24, 0xD3	; 211
+ 11e:	90 e3       	ldi	r25, 0x30	; 48
+ 120:	01 97       	sbiw	r24, 0x01	; 1
+ 122:	f1 f7       	brne	.-4      	; 0x120 <LCD_lcd_kick+0x6>
+ 124:	00 c0       	rjmp	.+0      	; 0x126 <LCD_lcd_kick+0xc>
+ 126:	00 00       	nop
+ 128:	c3 98       	cbi	0x18, 3	; 24
+ 12a:	08 95       	ret
+
+0000012c <LCD_WRITE_COMMAND>:
+ 12c:	cf 93       	push	r28
+ 12e:	c8 2f       	mov	r28, r24
+ 130:	8b b3       	in	r24, 0x1b	; 27
+ 132:	8f 70       	andi	r24, 0x0F	; 15
+ 134:	9c 2f       	mov	r25, r28
+ 136:	90 7f       	andi	r25, 0xF0	; 240
+ 138:	89 2b       	or	r24, r25
+ 13a:	8b bb       	out	0x1b, r24	; 27
+ 13c:	88 b3       	in	r24, 0x18	; 24
+ 13e:	89 7f       	andi	r24, 0xF9	; 249
+ 140:	88 bb       	out	0x18, r24	; 24
+ 142:	0e 94 8d 00 	call	0x11a	; 0x11a <LCD_lcd_kick>
+ 146:	8b b3       	in	r24, 0x1b	; 27
+ 148:	28 2f       	mov	r18, r24
+ 14a:	2f 70       	andi	r18, 0x0F	; 15
+ 14c:	30 e1       	ldi	r19, 0x10	; 16
+ 14e:	c3 9f       	mul	r28, r19
+ 150:	c0 01       	movw	r24, r0
+ 152:	11 24       	eor	r1, r1
+ 154:	82 2b       	or	r24, r18
+ 156:	8b bb       	out	0x1b, r24	; 27
+ 158:	88 b3       	in	r24, 0x18	; 24
+ 15a:	89 7f       	andi	r24, 0xF9	; 249
+ 15c:	88 bb       	out	0x18, r24	; 24
+ 15e:	0e 94 8d 00 	call	0x11a	; 0x11a <LCD_lcd_kick>
+ 162:	cf 91       	pop	r28
+ 164:	08 95       	ret
+
+00000166 <LCD_clear_screen>:
+ 166:	10 92 7f 00 	sts	0x007F, r1	; 0x80007f <__data_end+0x1>
+ 16a:	10 92 7e 00 	sts	0x007E, r1	; 0x80007e <__data_end>
+ 16e:	81 e0       	ldi	r24, 0x01	; 1
+ 170:	0e 94 96 00 	call	0x12c	; 0x12c <LCD_WRITE_COMMAND>
+ 174:	08 95       	ret
+
+00000176 <LCD_INIT>:
+	#else
+		//round up by default
+		__ticks_dc = (uint32_t)(ceil(fabs(__tmp)));
+	#endif
+
+	__builtin_avr_delay_cycles(__ticks_dc);
+ 176:	87 e8       	ldi	r24, 0x87	; 135
+ 178:	93 e1       	ldi	r25, 0x13	; 19
+ 17a:	01 97       	sbiw	r24, 0x01	; 1
+ 17c:	f1 f7       	brne	.-4      	; 0x17a <LCD_INIT+0x4>
+ 17e:	00 c0       	rjmp	.+0      	; 0x180 <LCD_INIT+0xa>
+ 180:	00 00       	nop
+
+void LCD_INIT(){
+	_delay_ms(20);
+	//DataDir_LCD_CTRL |= (1<<EN_SWITCH | 1<<RS_SWITCH | 1<<RW_SWITCH); 
+	//important Note: be Configure at main based on GPIO Driver .
+	LCD_CTRL &= ~ (1<<EN_SWITCH | 1<<RS_SWITCH | 1<<RW_SWITCH);
+ 182:	88 b3       	in	r24, 0x18	; 24
+ 184:	81 7f       	andi	r24, 0xF1	; 241
+ 186:	88 bb       	out	0x18, r24	; 24
+ 188:	85 ea       	ldi	r24, 0xA5	; 165
+ 18a:	9e e0       	ldi	r25, 0x0E	; 14
+ 18c:	01 97       	sbiw	r24, 0x01	; 1
+ 18e:	f1 f7       	brne	.-4      	; 0x18c <LCD_INIT+0x16>
+ 190:	00 c0       	rjmp	.+0      	; 0x192 <LCD_INIT+0x1c>
+ 192:	00 00       	nop
+	//DataDir_LCD_PORT = 0xFF;   
+	//important Note: be Configure at main based on GPIO Driver. 
+	_delay_ms(15);
+	LCD_clear_screen();
+ 194:	0e 94 b3 00 	call	0x166	; 0x166 <LCD_clear_screen>
+		//LCD_WRITE_COMMAND(0x02);		        /* send for 4 bit initialization of LCD  */
+		//LCD_WRITE_COMMAND(0x28);              /* 2 line, 5*7 matrix in 4-bit mode */
+		//LCD_WRITE_COMMAND(0x0c);              /* Display on cursor off*/
+		//LCD_WRITE_COMMAND(0x06);              /* Increment cursor (shift cursor to right)*/
+		//LCD_WRITE_COMMAND(0x01);
+	LCD_WRITE_COMMAND(0x02);
+ 198:	82 e0       	ldi	r24, 0x02	; 2
+ 19a:	0e 94 96 00 	call	0x12c	; 0x12c <LCD_WRITE_COMMAND>
+	LCD_WRITE_COMMAND(LCD_FUNCTION_4BIT_2LINES);
+ 19e:	88 e2       	ldi	r24, 0x28	; 40
+ 1a0:	0e 94 96 00 	call	0x12c	; 0x12c <LCD_WRITE_COMMAND>
+	#endif
+	
+	LCD_WRITE_COMMAND(LCD_ENTRY_MODE);
+ 1a4:	86 e0       	ldi	r24, 0x06	; 6
+ 1a6:	0e 94 96 00 	call	0x12c	; 0x12c <LCD_WRITE_COMMAND>
+	LCD_WRITE_COMMAND(LCD_BEGIN_AT_FIRST_ROW);
+ 1aa:	80 e8       	ldi	r24, 0x80	; 128
+ 1ac:	0e 94 96 00 	call	0x12c	; 0x12c <LCD_WRITE_COMMAND>
+	LCD_WRITE_COMMAND(LCD_DISP_ON_CURSOR_BLINK);	
+ 1b0:	8f e0       	ldi	r24, 0x0F	; 15
+ 1b2:	0e 94 96 00 	call	0x12c	; 0x12c <LCD_WRITE_COMMAND>
+ 1b6:	08 95       	ret
+
+000001b8 <check_position>:
+		LCD_lcd_kick();
+	#endif
+}
+
+void check_position (){
+	curser++;
+ 1b8:	80 91 7e 00 	lds	r24, 0x007E	; 0x80007e <__data_end>
+ 1bc:	90 91 7f 00 	lds	r25, 0x007F	; 0x80007f <__data_end+0x1>
+ 1c0:	01 96       	adiw	r24, 0x01	; 1
+ 1c2:	90 93 7f 00 	sts	0x007F, r25	; 0x80007f <__data_end+0x1>
+ 1c6:	80 93 7e 00 	sts	0x007E, r24	; 0x80007e <__data_end>
+	if (curser == 16)
+ 1ca:	80 31       	cpi	r24, 0x10	; 16
+ 1cc:	91 05       	cpc	r25, r1
+ 1ce:	21 f4       	brne	.+8      	; 0x1d8 <check_position+0x20>
+	if (line == 2)
+	{
+		if (position < 16 && position >= 0)
+		{
+			curser = 16;
+			LCD_WRITE_COMMAND(LCD_BEGIN_AT_SECOND_ROW+position);
+ 1d0:	80 ec       	ldi	r24, 0xC0	; 192
+ 1d2:	0e 94 96 00 	call	0x12c	; 0x12c <LCD_WRITE_COMMAND>
+ 1d6:	08 95       	ret
+	curser++;
+	if (curser == 16)
+	{
+		LCD_GOTO_XY(2,0);
+	}
+	else if (curser == 32)
+ 1d8:	80 97       	sbiw	r24, 0x20	; 32
+ 1da:	49 f4       	brne	.+18     	; 0x1ee <check_position+0x36>
+	{
+		LCD_clear_screen();
+ 1dc:	0e 94 b3 00 	call	0x166	; 0x166 <LCD_clear_screen>
+void LCD_GOTO_XY(unsigned char line, unsigned char position){
+	if (line == 1)
+	{
+		if (position < 16 && position >= 0)
+		{
+			LCD_WRITE_COMMAND(LCD_BEGIN_AT_FIRST_ROW+position);
+ 1e0:	80 e8       	ldi	r24, 0x80	; 128
+ 1e2:	0e 94 96 00 	call	0x12c	; 0x12c <LCD_WRITE_COMMAND>
+	}
+	else if (curser == 32)
+	{
+		LCD_clear_screen();
+		LCD_GOTO_XY(1,0);
+		curser = 0;
+ 1e6:	10 92 7f 00 	sts	0x007F, r1	; 0x80007f <__data_end+0x1>
+ 1ea:	10 92 7e 00 	sts	0x007E, r1	; 0x80007e <__data_end>
+ 1ee:	08 95       	ret
+
+000001f0 <LCD_WRITE_CHAR>:
+	}
+	
+}
+
+void LCD_WRITE_CHAR(unsigned char character){
+ 1f0:	cf 93       	push	r28
+ 1f2:	c8 2f       	mov	r28, r24
+		check_position();
+		_delay_ms(250);
+	#endif
+	#ifdef FOUR_BIT_MODE
+		//LCD_check_lcd_isbusy();
+		LCD_PORT = (LCD_PORT & 0x0F) | (character & 0xF0);
+ 1f4:	8b b3       	in	r24, 0x1b	; 27
+ 1f6:	8f 70       	andi	r24, 0x0F	; 15
+ 1f8:	9c 2f       	mov	r25, r28
+ 1fa:	90 7f       	andi	r25, 0xF0	; 240
+ 1fc:	89 2b       	or	r24, r25
+ 1fe:	8b bb       	out	0x1b, r24	; 27
+		LCD_CTRL |= 1<<RS_SWITCH; //turn RS ON for Data mode.
+ 200:	c1 9a       	sbi	0x18, 1	; 24
+		LCD_CTRL &= ~ (1<<RW_SWITCH);//turn RW off so you can write.
+ 202:	c2 98       	cbi	0x18, 2	; 24
+		LCD_lcd_kick();
+ 204:	0e 94 8d 00 	call	0x11a	; 0x11a <LCD_lcd_kick>
+		LCD_PORT = (LCD_PORT & 0x0F) | (character << 4);
+ 208:	8b b3       	in	r24, 0x1b	; 27
+ 20a:	28 2f       	mov	r18, r24
+ 20c:	2f 70       	andi	r18, 0x0F	; 15
+ 20e:	30 e1       	ldi	r19, 0x10	; 16
+ 210:	c3 9f       	mul	r28, r19
+ 212:	c0 01       	movw	r24, r0
+ 214:	11 24       	eor	r1, r1
+ 216:	82 2b       	or	r24, r18
+ 218:	8b bb       	out	0x1b, r24	; 27
+		LCD_CTRL |= 1<<RS_SWITCH; //turn RS ON for Data mode.
+ 21a:	c1 9a       	sbi	0x18, 1	; 24
+		LCD_CTRL &= ~ (1<<RW_SWITCH);//turn RW off so you can write.
+ 21c:	c2 98       	cbi	0x18, 2	; 24
+ 21e:	8f e9       	ldi	r24, 0x9F	; 159
+ 220:	96 e8       	ldi	r25, 0x86	; 134
+ 222:	21 e0       	ldi	r18, 0x01	; 1
+ 224:	81 50       	subi	r24, 0x01	; 1
+ 226:	90 40       	sbci	r25, 0x00	; 0
+ 228:	20 40       	sbci	r18, 0x00	; 0
+ 22a:	e1 f7       	brne	.-8      	; 0x224 <LCD_WRITE_CHAR+0x34>
+ 22c:	00 c0       	rjmp	.+0      	; 0x22e <LCD_WRITE_CHAR+0x3e>
+ 22e:	00 00       	nop
+		_delay_ms(500);
+		LCD_lcd_kick ();
+ 230:	0e 94 8d 00 	call	0x11a	; 0x11a <LCD_lcd_kick>
+ 234:	3f e9       	ldi	r19, 0x9F	; 159
+ 236:	86 e8       	ldi	r24, 0x86	; 134
+ 238:	91 e0       	ldi	r25, 0x01	; 1
+ 23a:	31 50       	subi	r19, 0x01	; 1
+ 23c:	80 40       	sbci	r24, 0x00	; 0
+ 23e:	90 40       	sbci	r25, 0x00	; 0
+ 240:	e1 f7       	brne	.-8      	; 0x23a <LCD_WRITE_CHAR+0x4a>
+ 242:	00 c0       	rjmp	.+0      	; 0x244 <LCD_WRITE_CHAR+0x54>
+ 244:	00 00       	nop
+		_delay_ms(500);
+		check_position();
+ 246:	0e 94 dc 00 	call	0x1b8	; 0x1b8 <check_position>
+ 24a:	2f e9       	ldi	r18, 0x9F	; 159
+ 24c:	36 e8       	ldi	r19, 0x86	; 134
+ 24e:	81 e0       	ldi	r24, 0x01	; 1
+ 250:	21 50       	subi	r18, 0x01	; 1
+ 252:	30 40       	sbci	r19, 0x00	; 0
+ 254:	80 40       	sbci	r24, 0x00	; 0
+ 256:	e1 f7       	brne	.-8      	; 0x250 <LCD_WRITE_CHAR+0x60>
+ 258:	00 c0       	rjmp	.+0      	; 0x25a <LCD_WRITE_CHAR+0x6a>
+ 25a:	00 00       	nop
+		_delay_ms(500);	
+	#endif
+}
+ 25c:	cf 91       	pop	r28
+ 25e:	08 95       	ret
+
+00000260 <LCD_WRITE_STRING>:
+
+void LCD_WRITE_STRING(char* string){
+ 260:	cf 93       	push	r28
+ 262:	df 93       	push	r29
+ 264:	ec 01       	movw	r28, r24
+	while (*string > 0) {
+ 266:	88 81       	ld	r24, Y
+ 268:	88 23       	and	r24, r24
+ 26a:	31 f0       	breq	.+12     	; 0x278 <LCD_WRITE_STRING+0x18>
+ 26c:	21 96       	adiw	r28, 0x01	; 1
+		LCD_WRITE_CHAR(*string++);
+ 26e:	0e 94 f8 00 	call	0x1f0	; 0x1f0 <LCD_WRITE_CHAR>
+		_delay_ms(500);	
+	#endif
+}
+
+void LCD_WRITE_STRING(char* string){
+	while (*string > 0) {
+ 272:	89 91       	ld	r24, Y+
+ 274:	81 11       	cpse	r24, r1
+ 276:	fb cf       	rjmp	.-10     	; 0x26e <LCD_WRITE_STRING+0xe>
+		LCD_WRITE_CHAR(*string++);
+	}
+}
+ 278:	df 91       	pop	r29
+ 27a:	cf 91       	pop	r28
+ 27c:	08 95       	ret
+
+0000027e <main>:
+
+#define F_CPU 8000000UL
+
+int main(void)
+{
+	MCAL_GPIO_Pin_Init(portB,RS_SWITCH,Output);
+ 27e:	41 e0       	ldi	r20, 0x01	; 1
+ 280:	61 e0       	ldi	r22, 0x01	; 1
+ 282:	88 e3       	ldi	r24, 0x38	; 56
+ 284:	90 e0       	ldi	r25, 0x00	; 0
+ 286:	0e 94 49 00 	call	0x92	; 0x92 <MCAL_GPIO_Pin_Init>
+	MCAL_GPIO_Pin_Init(portB,RW_SWITCH,Output);
+ 28a:	41 e0       	ldi	r20, 0x01	; 1
+ 28c:	62 e0       	ldi	r22, 0x02	; 2
+ 28e:	88 e3       	ldi	r24, 0x38	; 56
+ 290:	90 e0       	ldi	r25, 0x00	; 0
+ 292:	0e 94 49 00 	call	0x92	; 0x92 <MCAL_GPIO_Pin_Init>
+	MCAL_GPIO_Pin_Init(portB,EN_SWITCH,Output);
+ 296:	41 e0       	ldi	r20, 0x01	; 1
+ 298:	63 e0       	ldi	r22, 0x03	; 3
+ 29a:	88 e3       	ldi	r24, 0x38	; 56
+ 29c:	90 e0       	ldi	r25, 0x00	; 0
+ 29e:	0e 94 49 00 	call	0x92	; 0x92 <MCAL_GPIO_Pin_Init>
+	MCAL_GPIO_Init(portA,Output);
+ 2a2:	61 e0       	ldi	r22, 0x01	; 1
+ 2a4:	8b e3       	ldi	r24, 0x3B	; 59
+ 2a6:	90 e0       	ldi	r25, 0x00	; 0
+ 2a8:	0e 94 75 00 	call	0xea	; 0xea <MCAL_GPIO_Init>
+	LCD_INIT();
+ 2ac:	0e 94 bb 00 	call	0x176	; 0x176 <LCD_INIT>
+ 2b0:	83 e2       	ldi	r24, 0x23	; 35
+ 2b2:	94 ef       	ldi	r25, 0xF4	; 244
+ 2b4:	01 97       	sbiw	r24, 0x01	; 1
+ 2b6:	f1 f7       	brne	.-4      	; 0x2b4 <main+0x36>
+ 2b8:	00 c0       	rjmp	.+0      	; 0x2ba <main+0x3c>
+ 2ba:	00 00       	nop
+	_delay_ms(250);
+	LCD_WRITE_STRING("Welcome To Learn In Depth :)");
+ 2bc:	80 e6       	ldi	r24, 0x60	; 96
+ 2be:	90 e0       	ldi	r25, 0x00	; 0
+ 2c0:	0e 94 30 01 	call	0x260	; 0x260 <LCD_WRITE_STRING>
+ 2c4:	ff cf       	rjmp	.-2      	; 0x2c4 <main+0x46>
+
+000002c6 <_exit>:
+ 2c6:	f8 94       	cli
+
+000002c8 <__stop_program>:
+ 2c8:	ff cf       	rjmp	.-2      	; 0x2c8 <__stop_program>
