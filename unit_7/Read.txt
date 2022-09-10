@@ -1,3 +1,17 @@
 - Lesson_1: GPIO Part1.
 
 - Lesson_2: GPIO Part2.
+<<<<<<< HEAD
+
+- Lesson_3: GPIO Part3_(GPIO_Driver).
+
+- Lesson_4: 
+  . Integrate the HAL Driver for:
+    1- Keypad 
+    2- LCD 
+  .  Practical Session:
+    1- Implement the EXTI Driver based on the SPECS 
+    2- Debug the Driver 
+    3- Create a Small Project
+=======
+>>>>>>> 4c3dc34b966eaea29f8790eb86c72a8819b05b62
