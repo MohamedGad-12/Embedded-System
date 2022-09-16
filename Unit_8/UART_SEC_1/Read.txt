@@ -1,0 +1,2 @@
+
+- Uart for AtMega32 - (Polling Mechanism).
