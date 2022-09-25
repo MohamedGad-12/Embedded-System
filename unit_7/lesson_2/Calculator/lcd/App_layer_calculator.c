@@ -7,17 +7,17 @@
 
 void sum (char op1[], char op2[]){
 	LCD_GOTO_XY(2,0);
-	dipaly_number(atoi(op1) + atoi(op2));
+	dipaly_number(atol(op1) + atol(op2));
 }
 
 void subtract (char op1[], char op2[]){
 	LCD_GOTO_XY(2,0);
-	dipaly_number(atoi(op1)-atoi(op2));
+	dipaly_number(atol(op1)-atol(op2));
 }
 
 void multiplay (char op1[], char op2[]){	
 	LCD_GOTO_XY(2,0);
-	dipaly_number(atoi(op1)*atoi(op2));
+	dipaly_number(atol(op1)*atol(op2));
 }
 
 void divide (char op1[], char op2[]){

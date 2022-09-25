@@ -12,9 +12,9 @@
 #define DataDir_LCD_PORT DDRA
 #define LCD_CTRL PORTB
 #define DataDir_LCD_CTRL DDRB
-#define RS_SWITCH 1
-#define RW_SWITCH 2
-#define EN_SWITCH 3
+#define RS_SWITCH  1
+#define RW_SWITCH  2
+#define EN_SWITCH  3
 #define DATA_shift 0 // in 8 bit mode 0 and in 4 bit mode 4 
 
 #define EIGHT_BIT_MODE
@@ -49,7 +49,7 @@ void LCD_check_lcd_isbusy(void);
 void LCD_lcd_kick(void);
 void LCD_clear_screen();
 void LCD_GOTO_XY(unsigned char line, unsigned char position);
-void dipaly_number(int number);
+void dipaly_number(long int number);
 void dipaly_real_number(float number);
 
 

@@ -138,10 +138,10 @@ void LCD_WRITE_STRING(char* string){
 	}
 }
 
-void dipaly_number(int number)
+void dipaly_number(long int number)
 {
 	char str[16];
-	sprintf(str,"%d",number);
+	sprintf(str,"%li",number);
 	LCD_WRITE_STRING(str);
 }
 
