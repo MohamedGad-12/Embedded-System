@@ -1,0 +1,4 @@
+
+- LAB_1 : Master Slave Between 2 AtMega32.
+
+- LAB_2 : Use MAX7221 to Display Numbers.

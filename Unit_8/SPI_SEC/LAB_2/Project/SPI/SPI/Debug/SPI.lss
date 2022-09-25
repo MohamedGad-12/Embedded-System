@@ -1,0 +1,292 @@
+
+SPI.elf:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .text         0000015c  00000000  00000000  00000054  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  1 .data         00000000  00800060  00800060  000001b0  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  2 .comment      00000030  00000000  00000000  000001b0  2**0
+                  CONTENTS, READONLY
+  3 .note.gnu.avr.deviceinfo 0000003c  00000000  00000000  000001e0  2**2
+                  CONTENTS, READONLY
+  4 .debug_aranges 00000030  00000000  00000000  0000021c  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  5 .debug_info   0000080d  00000000  00000000  0000024c  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  6 .debug_abbrev 00000649  00000000  00000000  00000a59  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  7 .debug_line   00000345  00000000  00000000  000010a2  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  8 .debug_frame  00000044  00000000  00000000  000013e8  2**2
+                  CONTENTS, READONLY, DEBUGGING
+  9 .debug_str    00000342  00000000  00000000  0000142c  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 10 .debug_loc    00000174  00000000  00000000  0000176e  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 11 .debug_ranges 00000038  00000000  00000000  000018e2  2**0
+                  CONTENTS, READONLY, DEBUGGING
+
+Disassembly of section .text:
+
+00000000 <__vectors>:
+   0:	0c 94 2a 00 	jmp	0x54	; 0x54 <__ctors_end>
+   4:	0c 94 34 00 	jmp	0x68	; 0x68 <__bad_interrupt>
+   8:	0c 94 34 00 	jmp	0x68	; 0x68 <__bad_interrupt>
+   c:	0c 94 34 00 	jmp	0x68	; 0x68 <__bad_interrupt>
+  10:	0c 94 34 00 	jmp	0x68	; 0x68 <__bad_interrupt>
+  14:	0c 94 34 00 	jmp	0x68	; 0x68 <__bad_interrupt>
+  18:	0c 94 34 00 	jmp	0x68	; 0x68 <__bad_interrupt>
+  1c:	0c 94 34 00 	jmp	0x68	; 0x68 <__bad_interrupt>
+  20:	0c 94 34 00 	jmp	0x68	; 0x68 <__bad_interrupt>
+  24:	0c 94 34 00 	jmp	0x68	; 0x68 <__bad_interrupt>
+  28:	0c 94 34 00 	jmp	0x68	; 0x68 <__bad_interrupt>
+  2c:	0c 94 34 00 	jmp	0x68	; 0x68 <__bad_interrupt>
+  30:	0c 94 34 00 	jmp	0x68	; 0x68 <__bad_interrupt>
+  34:	0c 94 34 00 	jmp	0x68	; 0x68 <__bad_interrupt>
+  38:	0c 94 34 00 	jmp	0x68	; 0x68 <__bad_interrupt>
+  3c:	0c 94 34 00 	jmp	0x68	; 0x68 <__bad_interrupt>
+  40:	0c 94 34 00 	jmp	0x68	; 0x68 <__bad_interrupt>
+  44:	0c 94 34 00 	jmp	0x68	; 0x68 <__bad_interrupt>
+  48:	0c 94 34 00 	jmp	0x68	; 0x68 <__bad_interrupt>
+  4c:	0c 94 34 00 	jmp	0x68	; 0x68 <__bad_interrupt>
+  50:	0c 94 34 00 	jmp	0x68	; 0x68 <__bad_interrupt>
+
+00000054 <__ctors_end>:
+  54:	11 24       	eor	r1, r1
+  56:	1f be       	out	0x3f, r1	; 63
+  58:	cf e5       	ldi	r28, 0x5F	; 95
+  5a:	d8 e0       	ldi	r29, 0x08	; 8
+  5c:	de bf       	out	0x3e, r29	; 62
+  5e:	cd bf       	out	0x3d, r28	; 61
+  60:	0e 94 46 00 	call	0x8c	; 0x8c <main>
+  64:	0c 94 ac 00 	jmp	0x158	; 0x158 <_exit>
+
+00000068 <__bad_interrupt>:
+  68:	0c 94 00 00 	jmp	0	; 0x0 <__vectors>
+
+0000006c <SPI_Master_INIT>:
+#define TOGGLE_BIT(ADDRESS,VALUE,BIT_NUMBER)   ADDRESS ^= (VALUE << BIT_NUMBER)
+#define READ_BIT(ADDRESS,VALUE,BIT_NUMBER)     ((ADDRESS & (VALUE << BIT_NUMBER))>> BIT_NUMBER)
+
+void SPI_Master_INIT(){
+	
+	SET_BIT(DDRB,1,SS);
+  6c:	bc 9a       	sbi	0x17, 4	; 23
+	SET_BIT(DDRB,1,SCK);
+  6e:	bf 9a       	sbi	0x17, 7	; 23
+	SET_BIT(DDRB,1,MOSI);
+  70:	bd 9a       	sbi	0x17, 5	; 23
+	
+	RESET_BIT(DDRB,1,MISO);
+  72:	be 98       	cbi	0x17, 6	; 23
+	SET_BIT(SPCR,1,SPIE);
+	SET_BIT(SPCR,1,MSTR);
+	SET_BIT(SPCR,1,SPR0);
+	*/
+
+	SPCR = (1<<SPE) | (1<<MSTR) |  (1<<SPR0) ;
+  74:	81 e5       	ldi	r24, 0x51	; 81
+  76:	8d b9       	out	0x0d, r24	; 13
+  78:	08 95       	ret
+
+0000007a <execute>:
+}
+
+
+void execute (unsigned char cmd , unsigned char Data) {
+	
+	PORTB &= ~(1 << SS);
+  7a:	c4 98       	cbi	0x18, 4	; 24
+	SPDR = cmd;
+  7c:	8f b9       	out	0x0f, r24	; 15
+	while(!(READ_BIT(SPSR,1,SPIF)));
+  7e:	77 9b       	sbis	0x0e, 7	; 14
+  80:	fe cf       	rjmp	.-4      	; 0x7e <execute+0x4>
+	SPDR = Data;
+  82:	6f b9       	out	0x0f, r22	; 15
+	while(!(READ_BIT(SPSR,1,SPIF)));
+  84:	77 9b       	sbis	0x0e, 7	; 14
+  86:	fe cf       	rjmp	.-4      	; 0x84 <execute+0xa>
+	PORTB |= (1 << SS);
+  88:	c4 9a       	sbi	0x18, 4	; 24
+  8a:	08 95       	ret
+
+0000008c <main>:
+{
+	unsigned char counter = 0;
+	unsigned char D1 = 0;
+	unsigned char D2 = 0;
+	unsigned char index_display = 8;
+	SPI_Master_INIT();
+  8c:	0e 94 36 00 	call	0x6c	; 0x6c <SPI_Master_INIT>
+	execute(0x09, 0xFF);
+  90:	6f ef       	ldi	r22, 0xFF	; 255
+  92:	89 e0       	ldi	r24, 0x09	; 9
+  94:	0e 94 3d 00 	call	0x7a	; 0x7a <execute>
+	execute(0x0A, 0xFF);
+  98:	6f ef       	ldi	r22, 0xFF	; 255
+  9a:	8a e0       	ldi	r24, 0x0A	; 10
+  9c:	0e 94 3d 00 	call	0x7a	; 0x7a <execute>
+	execute(0x0B, 0xF7);
+  a0:	67 ef       	ldi	r22, 0xF7	; 247
+  a2:	8b e0       	ldi	r24, 0x0B	; 11
+  a4:	0e 94 3d 00 	call	0x7a	; 0x7a <execute>
+	execute(0x0C, 0x01);
+  a8:	61 e0       	ldi	r22, 0x01	; 1
+  aa:	8c e0       	ldi	r24, 0x0C	; 12
+  ac:	0e 94 3d 00 	call	0x7a	; 0x7a <execute>
+
+int main(void)
+{
+	unsigned char counter = 0;
+	unsigned char D1 = 0;
+	unsigned char D2 = 0;
+  b0:	00 e0       	ldi	r16, 0x00	; 0
+}
+
+int main(void)
+{
+	unsigned char counter = 0;
+	unsigned char D1 = 0;
+  b2:	10 e0       	ldi	r17, 0x00	; 0
+  b4:	11 c0       	rjmp	.+34     	; 0xd8 <main+0x4c>
+  b6:	ca e0       	ldi	r28, 0x0A	; 10
+	{
+		
+		while(D1 < 10)
+		{
+		for (counter = 0; counter <= 9; counter++){
+		execute(index_display,D1);
+  b8:	61 2f       	mov	r22, r17
+  ba:	88 e0       	ldi	r24, 0x08	; 8
+  bc:	0e 94 3d 00 	call	0x7a	; 0x7a <execute>
+  c0:	c1 50       	subi	r28, 0x01	; 1
+	while (1)
+	{
+		
+		while(D1 < 10)
+		{
+		for (counter = 0; counter <= 9; counter++){
+  c2:	d1 f7       	brne	.-12     	; 0xb8 <main+0x2c>
+		execute(index_display,D1);
+		}
+		D1++;
+  c4:	1f 5f       	subi	r17, 0xFF	; 255
+	#else
+		//round up by default
+		__ticks_dc = (uint32_t)(ceil(fabs(__tmp)));
+	#endif
+
+	__builtin_avr_delay_cycles(__ticks_dc);
+  c6:	2f e9       	ldi	r18, 0x9F	; 159
+  c8:	86 e8       	ldi	r24, 0x86	; 134
+  ca:	91 e0       	ldi	r25, 0x01	; 1
+  cc:	21 50       	subi	r18, 0x01	; 1
+  ce:	80 40       	sbci	r24, 0x00	; 0
+  d0:	90 40       	sbci	r25, 0x00	; 0
+  d2:	e1 f7       	brne	.-8      	; 0xcc <main+0x40>
+  d4:	00 c0       	rjmp	.+0      	; 0xd6 <main+0x4a>
+  d6:	00 00       	nop
+	execute(0x0C, 0x01);
+	
+	while (1)
+	{
+		
+		while(D1 < 10)
+  d8:	1a 30       	cpi	r17, 0x0A	; 10
+  da:	68 f3       	brcs	.-38     	; 0xb6 <main+0x2a>
+  dc:	ca e0       	ldi	r28, 0x0A	; 10
+  de:	d0 e0       	ldi	r29, 0x00	; 0
+		_delay_ms(500);
+		}
+		
+		
+		for (int i = 0; i <= 9; i++){
+		execute(index_display,D2);
+  e0:	60 2f       	mov	r22, r16
+  e2:	88 e0       	ldi	r24, 0x08	; 8
+  e4:	0e 94 3d 00 	call	0x7a	; 0x7a <execute>
+		execute((index_display-1),1);
+  e8:	61 e0       	ldi	r22, 0x01	; 1
+  ea:	87 e0       	ldi	r24, 0x07	; 7
+  ec:	0e 94 3d 00 	call	0x7a	; 0x7a <execute>
+  f0:	21 97       	sbiw	r28, 0x01	; 1
+		D1++;
+		_delay_ms(500);
+		}
+		
+		
+		for (int i = 0; i <= 9; i++){
+  f2:	b1 f7       	brne	.-20     	; 0xe0 <main+0x54>
+		execute(index_display,D2);
+		execute((index_display-1),1);
+		}
+		D2++;
+  f4:	0f 5f       	subi	r16, 0xFF	; 255
+		
+
+
+		while( (D1==10) && (D2==10)){
+  f6:	1a 30       	cpi	r17, 0x0A	; 10
+  f8:	29 f5       	brne	.+74     	; 0x144 <main+0xb8>
+  fa:	0a 30       	cpi	r16, 0x0A	; 10
+  fc:	19 f5       	brne	.+70     	; 0x144 <main+0xb8>
+  fe:	2f e9       	ldi	r18, 0x9F	; 159
+ 100:	86 e8       	ldi	r24, 0x86	; 134
+ 102:	91 e0       	ldi	r25, 0x01	; 1
+ 104:	21 50       	subi	r18, 0x01	; 1
+ 106:	80 40       	sbci	r24, 0x00	; 0
+ 108:	90 40       	sbci	r25, 0x00	; 0
+ 10a:	e1 f7       	brne	.-8      	; 0x104 <main+0x78>
+ 10c:	00 c0       	rjmp	.+0      	; 0x10e <main+0x82>
+ 10e:	00 00       	nop
+		_delay_ms(500);
+		execute(index_display,0);
+ 110:	60 e0       	ldi	r22, 0x00	; 0
+ 112:	88 e0       	ldi	r24, 0x08	; 8
+ 114:	0e 94 3d 00 	call	0x7a	; 0x7a <execute>
+		execute((index_display-1),2);
+ 118:	62 e0       	ldi	r22, 0x02	; 2
+ 11a:	87 e0       	ldi	r24, 0x07	; 7
+ 11c:	0e 94 3d 00 	call	0x7a	; 0x7a <execute>
+ 120:	2f e9       	ldi	r18, 0x9F	; 159
+ 122:	86 e8       	ldi	r24, 0x86	; 134
+ 124:	91 e0       	ldi	r25, 0x01	; 1
+ 126:	21 50       	subi	r18, 0x01	; 1
+ 128:	80 40       	sbci	r24, 0x00	; 0
+ 12a:	90 40       	sbci	r25, 0x00	; 0
+ 12c:	e1 f7       	brne	.-8      	; 0x126 <main+0x9a>
+ 12e:	00 c0       	rjmp	.+0      	; 0x130 <main+0xa4>
+ 130:	00 00       	nop
+		
+
+
+		while( (D1==10) && (D2==10)){
+		_delay_ms(500);
+		execute(index_display,0);
+ 132:	60 e0       	ldi	r22, 0x00	; 0
+ 134:	88 e0       	ldi	r24, 0x08	; 8
+ 136:	0e 94 3d 00 	call	0x7a	; 0x7a <execute>
+		execute((index_display-1),2);
+ 13a:	62 e0       	ldi	r22, 0x02	; 2
+ 13c:	87 e0       	ldi	r24, 0x07	; 7
+ 13e:	0e 94 3d 00 	call	0x7a	; 0x7a <execute>
+ 142:	ee cf       	rjmp	.-36     	; 0x120 <main+0x94>
+ 144:	2f e9       	ldi	r18, 0x9F	; 159
+ 146:	86 e8       	ldi	r24, 0x86	; 134
+ 148:	91 e0       	ldi	r25, 0x01	; 1
+ 14a:	21 50       	subi	r18, 0x01	; 1
+ 14c:	80 40       	sbci	r24, 0x00	; 0
+ 14e:	90 40       	sbci	r25, 0x00	; 0
+ 150:	e1 f7       	brne	.-8      	; 0x14a <main+0xbe>
+ 152:	00 c0       	rjmp	.+0      	; 0x154 <main+0xc8>
+ 154:	00 00       	nop
+ 156:	c0 cf       	rjmp	.-128    	; 0xd8 <main+0x4c>
+
+00000158 <_exit>:
+ 158:	f8 94       	cli
+
+0000015a <__stop_program>:
+ 15a:	ff cf       	rjmp	.-2      	; 0x15a <__stop_program>
