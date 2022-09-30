@@ -9,7 +9,7 @@
 # LINKS
 
 ## LinkedIn
-* https://www.linkedin.com/in/mohamed-gamal-283a8423b.
+* https://www.linkedin.com/in/mohamed-gamal-283a8423b
 
 ## Embedded System Google Drive:
 * https://drive.google.com/drive/folders/1wQmf0Z0SLEKERrnpos9el5DUmm8qyJmC
