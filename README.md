@@ -36,27 +36,27 @@
 ***
 ## **Second Term** ![50%](https://progress-bar.dev/50/?title=ON_Progress)
 
-* [Unit 6 MCU Fundatmentals](https://github.com/MohamedGad-12/Embedded-System/tree/main/Unit_6_MCU_Fundamentals)![](https://us-central1-progress-markdown.cloudfunctions.net/progress/100)<br>
+* [Unit 6 MCU Fundatmentals](https://github.com/MohamedGad-12/Embedded-System/tree/main/Unit_6_MCU_Fundamentals) ![](https://us-central1-progress-markdown.cloudfunctions.net/progress/100)<br>
 
-* [Unit 7 MCU Essential Peripherials](https://github.com/MohamedGad-12/Embedded-System/tree/main/Unit_7_MCU_Essential_Peripherials)![](https://us-central1-progress-markdown.cloudfunctions.net/progress/100)<br>
+* [Unit 7 MCU Essential Peripherials](https://github.com/MohamedGad-12/Embedded-System/tree/main/Unit_7_MCU_Essential_Peripherials) ![](https://us-central1-progress-markdown.cloudfunctions.net/progress/100)<br>
 
-* [Unit 8 MCU Interfacing](https://github.com/MohamedGad-12/Embedded-System/tree/main/Unit_8_MCU_Interfacing)![](https://us-central1-progress-markdown.cloudfunctions.net/progress/100)<br>
+* [Unit 8 MCU Interfacing](https://github.com/MohamedGad-12/Embedded-System/tree/main/Unit_8_MCU_Interfacing) ![](https://us-central1-progress-markdown.cloudfunctions.net/progress/100)<br>
 
-* [Unit 9 MCU Timer/ADC](https://github.com/MohamedGad-12/Embedded-System)![](https://us-central1-progress-markdown.cloudfunctions.net/progress/0)<br>
+* [Unit 9 MCU Timer/ADC](https://github.com/MohamedGad-12/Embedded-System) ![](https://us-central1-progress-markdown.cloudfunctions.net/progress/0)<br>
 
-* [Unit 10 SW Testing/Validation](https://github.com/MohamedGad-12/Embedded-System)![](https://us-central1-progress-markdown.cloudfunctions.net/progress/0)<br>
+* [Unit 10 SW Testing/Validation](https://github.com/MohamedGad-12/Embedded-System) ![](https://us-central1-progress-markdown.cloudfunctions.net/progress/0)<br>
 
-* [Unit 11 Apply on Embedded System Jobs](https://github.com/MohamedGad-12/Embedded-System)![](https://us-central1-progress-markdown.cloudfunctions.net/progress/0)<br>
+* [Unit 11 Apply on Embedded System Jobs](https://github.com/MohamedGad-12/Embedded-System) ![](https://us-central1-progress-markdown.cloudfunctions.net/progress/0)<br>
 
 ***
 ## **Third Term** ![0%](https://progress-bar.dev/0/?title=Soon)
 
-* [Unit 12 Advanced Topics](https://github.com/MohamedGad-12/Embedded-System)![](https://us-central1-progress-markdown.cloudfunctions.net/progress/0)<br>
+* [Unit 12 Advanced Topics](https://github.com/MohamedGad-12/Embedded-System) ![](https://us-central1-progress-markdown.cloudfunctions.net/progress/0)<br>
 
-* [Unit 13 Mastering Can Protocol](https://github.com/MohamedGad-12/Embedded-System)![](https://us-central1-progress-markdown.cloudfunctions.net/progress/0)<br>
-* [Unit 14 ARM & OS](https://github.com/MohamedGad-12/Embedded-System)![](https://us-central1-progress-markdown.cloudfunctions.net/progress/0)<br>
-* [Unit 15 RTOS Basics](https://github.com/MohamedGad-12/Embedded-System)![](https://us-central1-progress-markdown.cloudfunctions.net/progress/0)<br>
-* [Unit 16 Autosar Basics](https://github.com/MohamedGad-12/Embedded-System)![](https://us-central1-progress-markdown.cloudfunctions.net/progress/0)<br>
+* [Unit 13 Mastering Can Protocol](https://github.com/MohamedGad-12/Embedded-System) ![](https://us-central1-progress-markdown.cloudfunctions.net/progress/0)<br>
+* [Unit 14 ARM & OS](https://github.com/MohamedGad-12/Embedded-System) ![](https://us-central1-progress-markdown.cloudfunctions.net/progress/0)<br>
+* [Unit 15 RTOS Basics](https://github.com/MohamedGad-12/Embedded-System) ![](https://us-central1-progress-markdown.cloudfunctions.net/progress/0)<br>
+* [Unit 16 Autosar Basics](https://github.com/MohamedGad-12/Embedded-System) ![](https://us-central1-progress-markdown.cloudfunctions.net/progress/0)<br>
 ***
 
 ![Certifiacte](https://user-images.githubusercontent.com/85452808/193260122-01b69324-6d2e-4afc-9128-7aad0a7d4151.PNG)
