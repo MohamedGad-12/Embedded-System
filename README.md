@@ -1,4 +1,4 @@
-# Mastering-Embedded-Systems
+# Mastering-Embedded-System
 
 ![Profile](https://user-images.githubusercontent.com/85452808/193259516-554171bb-5329-4ca3-a2a1-d3ff9a703ab7.PNG)
 <br>
