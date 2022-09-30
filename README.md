@@ -17,7 +17,7 @@
 *******
 # CONTENT 
 
-## **First Term** ![90%](https://progress-bar.dev/100/?title=Done)
+## **First Term** ![100%](https://progress-bar.dev/100/?title=Done)
 
 
 * **[Unit 2 C programing](https://github.com/MohamedGad-12/Embedded-System/tree/main/unit2)**
@@ -34,7 +34,7 @@
 
 
 ***
-## **Second Term** ![0%](https://progress-bar.dev/20/?title=ON_Progress)
+## **Second Term** ![50%](https://progress-bar.dev/50/?title=ON_Progress)
 
 * [Unit 6 MCU Fundatmentals](https://github.com/MohamedGad-12/Embedded-System/tree/main/unit_6)![](https://us-central1-progress-markdown.cloudfunctions.net/progress/100)<br>
 * [Unit 7 MCU Essential Peripherials](https://github.com/MohamedGad-12/Embedded-System/tree/main/unit_7)![](https://us-central1-progress-markdown.cloudfunctions.net/progress/100)<br>
