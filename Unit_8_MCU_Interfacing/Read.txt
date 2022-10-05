@@ -4,3 +4,5 @@
 - Uart Section_2
 
 - SPI Section
+
+- I2C

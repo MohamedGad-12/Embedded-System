@@ -1,0 +1,3 @@
+- LAB_1: I2C -> Master Transmitter, Slave Receiver.
+
+- LAB_2: I2C -> Master Receiver, Slave Transmitter.
