@@ -14,7 +14,7 @@ void setup(){
 }
 
 
-void main() {
+int main() {
 
 	setup();
 
@@ -26,4 +26,5 @@ void main() {
 
 	}
 
+	return 0;
 }
