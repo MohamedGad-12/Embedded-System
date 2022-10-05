@@ -14,7 +14,7 @@ int main(){
 		while(1){
 			char text [50];
 			Mprint("1. Add Student Details manually \n");
-			Mprint("2. Add Student Details manually from file \n");
+			Mprint("2. Add Student Details from file \n");
 			Mprint("3. Find Student Details by Roll Number \n");
 			Mprint("4. Find Student Details by First Name \n");
 			Mprint("5. Find Students Details by Course ID \n");
