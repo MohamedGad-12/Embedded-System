@@ -1,4 +1,3 @@
-
 - UART_1: Uart Driver for Stm32F103x6.
 
 - UART_2: Uart for AtMega32 - (Polling Mechanism).
