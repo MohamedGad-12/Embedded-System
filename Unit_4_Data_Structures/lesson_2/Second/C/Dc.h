@@ -20,8 +20,6 @@ void init_Dc();
 STATE_define(Dc_idle);
 STATE_define(Dc_busy);
 
-extern void (* Dc_STATE) ();
-
 void (* Dc_STATE) ();
 
 #endif /* Dc_H_ */

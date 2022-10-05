@@ -6,7 +6,6 @@
  */
 
 #include "Us.h"
-#include "state.h"
 
 unsigned int Us_distance = 0;
 

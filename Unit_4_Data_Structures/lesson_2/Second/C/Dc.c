@@ -6,8 +6,6 @@
  */
 
 #include "Dc.h"
-#include "state.h"
-
 
 unsigned int Dc_speed = 0;
 
@@ -16,7 +14,7 @@ void init_Dc() {
 	printf("Dc init \n");
 }
 
-void DC_motor_set_Dc_speed(int s){
+void DC_motor_set_Dc_speed(unsigned int s){
 
 	Dc_speed = s;
 	Dc_STATE = STATE(Dc_busy);

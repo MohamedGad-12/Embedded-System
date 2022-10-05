@@ -20,6 +20,4 @@ STATE_define(CA_driving);
 
 void (* CA_STATE) ();
 
-void US_Sensor_set_distance(int d);
-
 #endif /* CA_H_ */
