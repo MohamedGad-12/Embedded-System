@@ -1,2 +1,0 @@
-
-- Uart for AtMega32 - (Interrupt Mechanism).
