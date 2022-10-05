@@ -1,8 +1,5 @@
+- Uart
 
-- Uart Lecture 
-- Uart Section_1 
-- Uart Section_2
-
-- SPI Section
+- SPI
 
 - I2C
