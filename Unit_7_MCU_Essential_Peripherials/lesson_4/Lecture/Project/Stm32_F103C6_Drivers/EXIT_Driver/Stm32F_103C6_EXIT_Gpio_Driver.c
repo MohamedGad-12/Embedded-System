@@ -203,7 +203,7 @@ void EXTI2_IRQHandler(void) {
 }
 
 //EXIT3
-void EXTI23_IRQHandler(void) {
+void EXTI3_IRQHandler(void) {
 
 	EXIT->EXTI_PR |= (1<<3);
 
