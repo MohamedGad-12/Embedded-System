@@ -118,8 +118,8 @@ enum polling_mechism {
 #define USARTDIV_MUL100(_PCLK_, _BAUD_)		(uint32_t) ((25 * _PCLK_) / (4 *_BAUD_))
 #define Mantissa_MUL100(_PCLK_, _BAUD_)		(uint32_t) (USARTDIV(_PCLK_, _BAUD_) * 100)
 #define Mantissa(_PCLK_, _BAUD_)			(uint32_t) (USARTDIV(_PCLK_, _BAUD_) )
-#define DIV_Fraction(_PCLK_, _BAUD_)		(uint32_t) (((USARTDIV_MUL100(_PCLK_, _BAUD_) - Mantissa_MUL100(_PCLK_, _BAUD_) )* 16 )
-#define UART_BRR_Register(_PCLK_, _BAUD_)	(( Mantissa (_PCLK_, _BAUD_) ) <<4 )|( (DIV_Fraction(_PCLK_, _BAUD_)) & 0xF ))
+#define DIV_Fraction(_PCLK_, _BAUD_)		(uint32_t) (((USARTDIV_MUL100(_PCLK_, _BAUD_) - Mantissa_MUL100(_PCLK_, _BAUD_) )* 16 ) / 100)
+#define UART_BRR_Register(_PCLK_, _BAUD_)	(( Mantissa (_PCLK_, _BAUD_) ) <<4 )|( (DIV_Fraction(_PCLK_, _BAUD_)) & 0xF )
 
 
 
