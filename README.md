@@ -42,7 +42,7 @@
 
 * [Unit 8 MCU Interfacing](https://github.com/MohamedGad-12/Embedded-System/tree/main/Unit_8_MCU_Interfacing) ![](https://us-central1-progress-markdown.cloudfunctions.net/progress/100)<br>
 
-* [Unit 9 MCU Timer/ADC](https://github.com/MohamedGad-12/Embedded-System) ![](https://us-central1-progress-markdown.cloudfunctions.net/progress/0)<br>
+* [Unit 9 MCU Timer/ADC](https://github.com/MohamedGad-12/Embedded-System) ![](https://us-central1-progress-markdown.cloudfunctions.net/progress/50)<br>
 
 * [Unit 10 SW Testing/Validation](https://github.com/MohamedGad-12/Embedded-System) ![](https://us-central1-progress-markdown.cloudfunctions.net/progress/0)<br>
 
